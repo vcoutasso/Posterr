@@ -5,7 +5,7 @@ final class TabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         let tabBarViewControllers = [
-            HomeViewController(),
+            HomeViewControllerFactory.make(),
             ProfileViewController(),
         ]
 

@@ -17,6 +17,12 @@
 		4C700E8B2896355600097CE4 /* PosterrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E8A2896355600097CE4 /* PosterrUITestsLaunchTests.swift */; };
 		4C700E9E28963CA000097CE4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E9D28963CA000097CE4 /* HomeViewController.swift */; };
 		4C700EA028963CB300097CE4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E9F28963CB300097CE4 /* ProfileViewController.swift */; };
+		4CEE1EDD289722F30006B897 /* HomeDisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EDC289722F30006B897 /* HomeDisplayLogic.swift */; };
+		4CEE1EE0289723750006B897 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EDF289723750006B897 /* HomeInteractor.swift */; };
+		4CEE1EE2289723830006B897 /* HomeInteractionLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EE1289723830006B897 /* HomeInteractionLogic.swift */; };
+		4CEE1EE62897249C0006B897 /* HomeViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EE52897249C0006B897 /* HomeViewControllerFactory.swift */; };
+		4CEE1EE82897261F0006B897 /* HomePresentationLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EE72897261F0006B897 /* HomePresentationLogic.swift */; };
+		4CEE1EEA2897262D0006B897 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EE92897262D0006B897 /* HomePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		4C700E8A2896355600097CE4 /* PosterrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterrUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4C700E9D28963CA000097CE4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4C700E9F28963CB300097CE4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4CEE1EDC289722F30006B897 /* HomeDisplayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDisplayLogic.swift; sourceTree = "<group>"; };
+		4CEE1EDF289723750006B897 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		4CEE1EE1289723830006B897 /* HomeInteractionLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractionLogic.swift; sourceTree = "<group>"; };
+		4CEE1EE52897249C0006B897 /* HomeViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerFactory.swift; sourceTree = "<group>"; };
+		4CEE1EE72897261F0006B897 /* HomePresentationLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresentationLogic.swift; sourceTree = "<group>"; };
+		4CEE1EE92897262D0006B897 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +177,10 @@
 		4C700E9B28963C8600097CE4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4C700E9D28963CA000097CE4 /* HomeViewController.swift */,
+				4CEE1EE42897248D0006B897 /* Utils */,
+				4CEE1EDB289722C50006B897 /* Views */,
+				4CEE1EDE289723270006B897 /* Interactors */,
+				4CEE1EE3289724760006B897 /* Presenters */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -176,6 +191,41 @@
 				4C700E9F28963CB300097CE4 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		4CEE1EDB289722C50006B897 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CEE1EDC289722F30006B897 /* HomeDisplayLogic.swift */,
+				4C700E9D28963CA000097CE4 /* HomeViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4CEE1EDE289723270006B897 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				4CEE1EE1289723830006B897 /* HomeInteractionLogic.swift */,
+				4CEE1EDF289723750006B897 /* HomeInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		4CEE1EE3289724760006B897 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				4CEE1EE72897261F0006B897 /* HomePresentationLogic.swift */,
+				4CEE1EE92897262D0006B897 /* HomePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		4CEE1EE42897248D0006B897 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4CEE1EE52897249C0006B897 /* HomeViewControllerFactory.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,11 +358,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CEE1EE2289723830006B897 /* HomeInteractionLogic.swift in Sources */,
 				4C700E6C2896355400097CE4 /* TabBarViewController.swift in Sources */,
 				4C700E682896355400097CE4 /* AppDelegate.swift in Sources */,
+				4CEE1EDD289722F30006B897 /* HomeDisplayLogic.swift in Sources */,
 				4C700EA028963CB300097CE4 /* ProfileViewController.swift in Sources */,
 				4C700E6A2896355400097CE4 /* SceneDelegate.swift in Sources */,
 				4C700E9E28963CA000097CE4 /* HomeViewController.swift in Sources */,
+				4CEE1EE0289723750006B897 /* HomeInteractor.swift in Sources */,
+				4CEE1EE82897261F0006B897 /* HomePresentationLogic.swift in Sources */,
+				4CEE1EE62897249C0006B897 /* HomeViewControllerFactory.swift in Sources */,
+				4CEE1EEA2897262D0006B897 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

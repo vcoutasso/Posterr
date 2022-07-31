@@ -2,7 +2,12 @@ import Foundation
 import UIKit
 
 final class HomeViewController: UIViewController {
-    init() {
+
+    private let interactor: HomeInteractionLogic
+
+    init(interactor: HomeInteractionLogic) {
+        self.interactor = interactor
+
         super.init(nibName: nil, bundle: nil)
 
         tabBarItem = UITabBarItem(
@@ -18,6 +23,10 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemPurple
+        view.backgroundColor = .black
     }
+}
+
+extension HomeViewController: HomeDisplayLogic {
+    
 }
