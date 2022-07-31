@@ -6,7 +6,7 @@ final class TabBarViewController: UITabBarController {
 
         let homeViewController = HomeViewControllerFactory.make()
         let homeNavigationController = UINavigationController(rootViewController: homeViewController)
-        let profileViewController = ProfileViewController()
+        let profileViewController = ProfileViewControllerFactory.make()
         let profileNavigationController = UINavigationController(rootViewController: profileViewController)
 
         let tabBarViewControllers = [

@@ -23,6 +23,12 @@
 		4CEE1EE62897249C0006B897 /* HomeViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EE52897249C0006B897 /* HomeViewControllerFactory.swift */; };
 		4CEE1EE82897261F0006B897 /* HomePresentationLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EE72897261F0006B897 /* HomePresentationLogic.swift */; };
 		4CEE1EEA2897262D0006B897 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EE92897262D0006B897 /* HomePresenter.swift */; };
+		4CEE1EEC289737630006B897 /* ProfileDisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EEB289737630006B897 /* ProfileDisplayLogic.swift */; };
+		4CEE1EF0289737AC0006B897 /* ProfilePresentationLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EEF289737AC0006B897 /* ProfilePresentationLogic.swift */; };
+		4CEE1EF728973A3D0006B897 /* ProfileInteractionLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EF628973A3D0006B897 /* ProfileInteractionLogic.swift */; };
+		4CEE1EF928973A820006B897 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EF828973A820006B897 /* ProfileInteractor.swift */; };
+		4CEE1EFB28973AA00006B897 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EFA28973AA00006B897 /* ProfilePresenter.swift */; };
+		4CEE1EFE28973B050006B897 /* ProfileViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EFD28973B050006B897 /* ProfileViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +69,12 @@
 		4CEE1EE52897249C0006B897 /* HomeViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerFactory.swift; sourceTree = "<group>"; };
 		4CEE1EE72897261F0006B897 /* HomePresentationLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresentationLogic.swift; sourceTree = "<group>"; };
 		4CEE1EE92897262D0006B897 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		4CEE1EEB289737630006B897 /* ProfileDisplayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDisplayLogic.swift; sourceTree = "<group>"; };
+		4CEE1EEF289737AC0006B897 /* ProfilePresentationLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresentationLogic.swift; sourceTree = "<group>"; };
+		4CEE1EF628973A3D0006B897 /* ProfileInteractionLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractionLogic.swift; sourceTree = "<group>"; };
+		4CEE1EF828973A820006B897 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		4CEE1EFA28973AA00006B897 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		4CEE1EFD28973B050006B897 /* ProfileViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +200,10 @@
 		4C700E9C28963C8C00097CE4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				4C700E9F28963CB300097CE4 /* ProfileViewController.swift */,
+				4CEE1EFC28973AFA0006B897 /* Utils */,
+				4CEE1EED289737890006B897 /* Views */,
+				4CEE1EF528973A2E0006B897 /* Interactors */,
+				4CEE1EEE289737920006B897 /* Presenters */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -224,6 +239,41 @@
 			isa = PBXGroup;
 			children = (
 				4CEE1EE52897249C0006B897 /* HomeViewControllerFactory.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4CEE1EED289737890006B897 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CEE1EEB289737630006B897 /* ProfileDisplayLogic.swift */,
+				4C700E9F28963CB300097CE4 /* ProfileViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4CEE1EEE289737920006B897 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				4CEE1EEF289737AC0006B897 /* ProfilePresentationLogic.swift */,
+				4CEE1EFA28973AA00006B897 /* ProfilePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		4CEE1EF528973A2E0006B897 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				4CEE1EF628973A3D0006B897 /* ProfileInteractionLogic.swift */,
+				4CEE1EF828973A820006B897 /* ProfileInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		4CEE1EFC28973AFA0006B897 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4CEE1EFD28973B050006B897 /* ProfileViewControllerFactory.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -361,12 +411,18 @@
 				4CEE1EE2289723830006B897 /* HomeInteractionLogic.swift in Sources */,
 				4C700E6C2896355400097CE4 /* TabBarViewController.swift in Sources */,
 				4C700E682896355400097CE4 /* AppDelegate.swift in Sources */,
+				4CEE1EFE28973B050006B897 /* ProfileViewControllerFactory.swift in Sources */,
 				4CEE1EDD289722F30006B897 /* HomeDisplayLogic.swift in Sources */,
 				4C700EA028963CB300097CE4 /* ProfileViewController.swift in Sources */,
+				4CEE1EF0289737AC0006B897 /* ProfilePresentationLogic.swift in Sources */,
 				4C700E6A2896355400097CE4 /* SceneDelegate.swift in Sources */,
+				4CEE1EF928973A820006B897 /* ProfileInteractor.swift in Sources */,
+				4CEE1EF728973A3D0006B897 /* ProfileInteractionLogic.swift in Sources */,
 				4C700E9E28963CA000097CE4 /* HomeViewController.swift in Sources */,
+				4CEE1EFB28973AA00006B897 /* ProfilePresenter.swift in Sources */,
 				4CEE1EE0289723750006B897 /* HomeInteractor.swift in Sources */,
 				4CEE1EE82897261F0006B897 /* HomePresentationLogic.swift in Sources */,
+				4CEE1EEC289737630006B897 /* ProfileDisplayLogic.swift in Sources */,
 				4CEE1EE62897249C0006B897 /* HomeViewControllerFactory.swift in Sources */,
 				4CEE1EEA2897262D0006B897 /* HomePresenter.swift in Sources */,
 			);

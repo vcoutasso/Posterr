@@ -7,7 +7,6 @@ enum HomeViewControllerFactory {
         let interactor = HomeInteractor(presenter: presenter)
         let viewController = HomeViewController(interactor: interactor)
         presenter.setDisplayLogicDelegate(viewController)
-        let _ = UINavigationController(rootViewController: viewController)
 
         return viewController
     }

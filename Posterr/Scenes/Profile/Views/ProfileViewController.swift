@@ -2,7 +2,12 @@ import Foundation
 import UIKit
 
 final class ProfileViewController: UIViewController {
-    init() {
+
+    private let interactor: ProfileInteractionLogic
+
+    init(interactor: ProfileInteractionLogic) {
+        self.interactor = interactor
+
         super.init(nibName: nil, bundle: nil)
 
         tabBarItem = UITabBarItem(
@@ -20,4 +25,10 @@ final class ProfileViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
     }
+}
+
+// MARK: - Profile Display Logic
+
+extension ProfileViewController: ProfileDisplayLogic {
+    
 }
