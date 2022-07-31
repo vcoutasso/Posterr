@@ -4,9 +4,14 @@ final class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let homeViewController = HomeViewControllerFactory.make()
+        let homeNavigationController = UINavigationController(rootViewController: homeViewController)
+        let profileViewController = ProfileViewController()
+        let profileNavigationController = UINavigationController(rootViewController: profileViewController)
+
         let tabBarViewControllers = [
-            HomeViewControllerFactory.make(),
-            ProfileViewController(),
+            homeNavigationController,
+            profileNavigationController,
         ]
 
         setViewControllers(tabBarViewControllers, animated: true)
