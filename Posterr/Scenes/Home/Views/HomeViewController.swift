@@ -5,15 +5,6 @@ final class HomeViewController: UIViewController {
 
     private let interactor: HomeInteractionLogic
 
-    private lazy var newPostButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("New Post", for: .normal)
-        button.addTarget(self, action: #selector(didTapNewPostButton), for: .touchUpInside)
-
-        return button
-    }()
-
     init(interactor: HomeInteractionLogic) {
         self.interactor = interactor
 
@@ -32,18 +23,17 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
 
-        view.addSubview(newPostButton)
-
-        NSLayoutConstraint.activate([
-            newPostButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            newPostButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-        ])
+        setupSubviews()
     }
 
-    @objc
-    private func didTapNewPostButton() {
-        navigationController?.pushViewController(UIViewController(), animated: true)
-    }
+    private lazy var newPostButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("New Post", for: .normal)
+        button.addTarget(self, action: #selector(didTapNewPostButton), for: .touchUpInside)
+
+        return button
+    }()
 }
 
 // MARK: - Home Display Logic
@@ -70,5 +60,19 @@ private extension HomeViewController {
             action: nil)
 
         navigationItem.title = "Posterr"
+    }
+
+    func setupSubviews() {
+        view.addSubview(newPostButton)
+
+        NSLayoutConstraint.activate([
+            newPostButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            newPostButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+        ])
+    }
+
+    @objc
+    func didTapNewPostButton() {
+        navigationController?.pushViewController(NewPostViewController(), animated: true)
     }
 }
