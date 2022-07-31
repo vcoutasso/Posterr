@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  Posterr
-//
-//  Created by Vinícius Couto on 31/07/22.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -18,7 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
-        let rootViewController = ViewController()
+        let rootViewController = TabViewController()
 
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = rootViewController
