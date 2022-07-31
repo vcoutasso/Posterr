@@ -19,10 +19,8 @@ final class HomeViewController: UIViewController {
 
         super.init(nibName: nil, bundle: nil)
 
-        tabBarItem = UITabBarItem(
-            title: "Home",
-            image: UIImage(systemName: "house"),
-            selectedImage: UIImage(systemName: "house.fill"))
+        setupTabBarItem()
+        setupNavigationBar()
     }
 
     @available(*, unavailable)
@@ -32,7 +30,7 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = .white
 
         view.addSubview(newPostButton)
 
@@ -48,6 +46,29 @@ final class HomeViewController: UIViewController {
     }
 }
 
+// MARK: - Home Display Logic
+
 extension HomeViewController: HomeDisplayLogic {
     
+}
+
+// MARK: - Utils
+
+private extension HomeViewController {
+    func setupTabBarItem() {
+        tabBarItem = UITabBarItem(
+            title: "Home",
+            image: UIImage(systemName: "house"),
+            selectedImage: UIImage(systemName: "house.fill"))
+    }
+
+    func setupNavigationBar() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "person.crop.circle"),
+            style: .plain,
+            target: nil,
+            action: nil)
+
+        navigationItem.title = "Posterr"
+    }
 }
