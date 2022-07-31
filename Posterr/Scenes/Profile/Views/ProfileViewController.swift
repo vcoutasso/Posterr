@@ -10,10 +10,8 @@ final class ProfileViewController: UIViewController {
 
         super.init(nibName: nil, bundle: nil)
 
-        tabBarItem = UITabBarItem(
-            title: "Profile",
-            image: UIImage(systemName: "person"),
-            selectedImage: UIImage(systemName: "person.fill"))
+        setupTabBarItem()
+        setupNavigationBar()
     }
 
     @available(*, unavailable)
@@ -31,4 +29,19 @@ final class ProfileViewController: UIViewController {
 
 extension ProfileViewController: ProfileDisplayLogic {
     
+}
+
+// MARK: - Utils
+
+private extension ProfileViewController {
+    func setupTabBarItem() {
+        tabBarItem = UITabBarItem(
+            title: "Profile",
+            image: UIImage(systemName: "person"),
+            selectedImage: UIImage(systemName: "person.fill"))
+    }
+
+    func setupNavigationBar() {
+        navigationItem.title = "Profile"
+    }
 }
