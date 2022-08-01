@@ -4,9 +4,11 @@ import UIKit
 final class HomeViewController: UIViewController {
 
     private let interactor: HomeInteractionLogic
+    private let router: HomeRoutingLogic
 
-    init(interactor: HomeInteractionLogic) {
+    init(interactor: HomeInteractionLogic, router: HomeRoutingLogic) {
         self.interactor = interactor
+        self.router = router
 
         super.init(nibName: nil, bundle: nil)
 
@@ -83,11 +85,11 @@ private extension HomeViewController {
 
     @objc
     func didTapNewPostButton() {
-        navigationController?.pushViewController(NewPostViewController(), animated: true)
+        router.routeToNewPost()
     }
 
     func configureNewPostButton() {
-        // Makes the button circular because the its height is constrained equal to its width
+        // Makes the button circular because its height is constrained equal to its width
         newPostButton.layer.cornerRadius = newPostButton.bounds.size.height / 2
     }
 }

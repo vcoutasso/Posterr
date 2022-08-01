@@ -6,7 +6,7 @@ enum ProfileViewControllerFactory {
         let presenter = ProfilePresenter()
         let interactor = ProfileInteractor(presenter: presenter)
         let viewController = ProfileViewController(interactor: interactor)
-        presenter.setDisplayLogicDelegate(viewController)
+        presenter.displayLogicDelegate = viewController
 
         return viewController
     }
