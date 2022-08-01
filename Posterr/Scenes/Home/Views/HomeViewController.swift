@@ -26,11 +26,21 @@ final class HomeViewController: UIViewController {
         setupSubviews()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        configureNewPostButton()
+    }
+
     private lazy var newPostButton: UIButton = {
-        let button = UIButton(type: .system)
+        var configuration = UIButton.Configuration.filled()
+        configuration.image = UIImage(systemName: "square.and.pencil")
+        configuration.buttonSize = .medium
+
+        let button = UIButton(configuration: configuration)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("New Post", for: .normal)
         button.addTarget(self, action: #selector(didTapNewPostButton), for: .touchUpInside)
+        button.clipsToBounds = true
+        button.heightAnchor.constraint(equalTo: button.widthAnchor).isActive = true
 
         return button
     }()
@@ -66,13 +76,18 @@ private extension HomeViewController {
         view.addSubview(newPostButton)
 
         NSLayoutConstraint.activate([
-            newPostButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            newPostButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            newPostButton.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+            newPostButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
         ])
     }
 
     @objc
     func didTapNewPostButton() {
         navigationController?.pushViewController(NewPostViewController(), animated: true)
+    }
+
+    func configureNewPostButton() {
+        // Makes the button circular because the its height is constrained equal to its width
+        newPostButton.layer.cornerRadius = newPostButton.bounds.size.height / 2
     }
 }
