@@ -2,7 +2,13 @@ import Foundation
 import UIKit
 
 final class NewPostViewController: UIViewController {
-    init() {
+    private let interactor: NewPostInteractionLogic
+    private let router: NewPostRoutingLogic
+
+    init(interactor: NewPostInteractionLogic, router: NewPostRoutingLogic) {
+        self.interactor = interactor
+        self.router = router
+        
         super.init(nibName: nil, bundle: nil)
 
         setupNavigationBar()
@@ -78,7 +84,7 @@ private extension NewPostViewController {
 
     @objc
     func didTapCancelButton() {
-        navigationController?.popViewController(animated: true)
+        router.routeToPrevious()
     }
 
     @objc

@@ -33,6 +33,13 @@
 		4CEE1F092897653C0006B897 /* HomeRoutingLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1F082897653C0006B897 /* HomeRoutingLogic.swift */; };
 		4CEE1F0B2897656C0006B897 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1F0A2897656C0006B897 /* HomeRouter.swift */; };
 		4CEE1F0D289768D70006B897 /* NewPostDisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1F0C289768D70006B897 /* NewPostDisplayLogic.swift */; };
+		4CEE1F10289771850006B897 /* NewPostPresentationLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1F0F289771850006B897 /* NewPostPresentationLogic.swift */; };
+		4CEE1F12289771A80006B897 /* NewPostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1F11289771A80006B897 /* NewPostPresenter.swift */; };
+		4CEE1F15289771CD0006B897 /* NewPostInteractionLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1F14289771CD0006B897 /* NewPostInteractionLogic.swift */; };
+		4CEE1F17289771E00006B897 /* NewPostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1F16289771E00006B897 /* NewPostInteractor.swift */; };
+		4CEE1F1A289772570006B897 /* NewPostRoutingLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1F19289772570006B897 /* NewPostRoutingLogic.swift */; };
+		4CEE1F1C2897726B0006B897 /* NewPostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1F1B2897726B0006B897 /* NewPostRouter.swift */; };
+		4CEE1F1F289772950006B897 /* NewPostViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1F1E289772950006B897 /* NewPostViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +90,13 @@
 		4CEE1F082897653C0006B897 /* HomeRoutingLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRoutingLogic.swift; sourceTree = "<group>"; };
 		4CEE1F0A2897656C0006B897 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		4CEE1F0C289768D70006B897 /* NewPostDisplayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostDisplayLogic.swift; sourceTree = "<group>"; };
+		4CEE1F0F289771850006B897 /* NewPostPresentationLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostPresentationLogic.swift; sourceTree = "<group>"; };
+		4CEE1F11289771A80006B897 /* NewPostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostPresenter.swift; sourceTree = "<group>"; };
+		4CEE1F14289771CD0006B897 /* NewPostInteractionLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostInteractionLogic.swift; sourceTree = "<group>"; };
+		4CEE1F16289771E00006B897 /* NewPostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostInteractor.swift; sourceTree = "<group>"; };
+		4CEE1F19289772570006B897 /* NewPostRoutingLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostRoutingLogic.swift; sourceTree = "<group>"; };
+		4CEE1F1B2897726B0006B897 /* NewPostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostRouter.swift; sourceTree = "<group>"; };
+		4CEE1F1E289772950006B897 /* NewPostViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,7 +321,11 @@
 		4CEE1F03289764130006B897 /* NewPost */ = {
 			isa = PBXGroup;
 			children = (
+				4CEE1F1D289772890006B897 /* Utils */,
 				4CEE1F042897642F0006B897 /* Views */,
+				4CEE1F13289771C10006B897 /* Interactors */,
+				4CEE1F0E289771790006B897 /* Presenters */,
+				4CEE1F18289772370006B897 /* Routers */,
 			);
 			path = NewPost;
 			sourceTree = "<group>";
@@ -328,6 +346,41 @@
 				4CEE1F0A2897656C0006B897 /* HomeRouter.swift */,
 			);
 			path = Routers;
+			sourceTree = "<group>";
+		};
+		4CEE1F0E289771790006B897 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				4CEE1F0F289771850006B897 /* NewPostPresentationLogic.swift */,
+				4CEE1F11289771A80006B897 /* NewPostPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		4CEE1F13289771C10006B897 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				4CEE1F14289771CD0006B897 /* NewPostInteractionLogic.swift */,
+				4CEE1F16289771E00006B897 /* NewPostInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		4CEE1F18289772370006B897 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				4CEE1F19289772570006B897 /* NewPostRoutingLogic.swift */,
+				4CEE1F1B2897726B0006B897 /* NewPostRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		4CEE1F1D289772890006B897 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4CEE1F1E289772950006B897 /* NewPostViewControllerFactory.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,14 +513,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CEE1F17289771E00006B897 /* NewPostInteractor.swift in Sources */,
 				4CEE1EE2289723830006B897 /* HomeInteractionLogic.swift in Sources */,
 				4C700E6C2896355400097CE4 /* TabBarViewController.swift in Sources */,
 				4CEE1F092897653C0006B897 /* HomeRoutingLogic.swift in Sources */,
 				4C700E682896355400097CE4 /* AppDelegate.swift in Sources */,
 				4CEE1EFE28973B050006B897 /* ProfileViewControllerFactory.swift in Sources */,
+				4CEE1F1C2897726B0006B897 /* NewPostRouter.swift in Sources */,
+				4CEE1F10289771850006B897 /* NewPostPresentationLogic.swift in Sources */,
+				4CEE1F15289771CD0006B897 /* NewPostInteractionLogic.swift in Sources */,
 				4CEE1EDD289722F30006B897 /* HomeDisplayLogic.swift in Sources */,
 				4CEE1F00289742520006B897 /* NewPostViewController.swift in Sources */,
 				4C700EA028963CB300097CE4 /* ProfileViewController.swift in Sources */,
+				4CEE1F1F289772950006B897 /* NewPostViewControllerFactory.swift in Sources */,
 				4CEE1EF0289737AC0006B897 /* ProfilePresentationLogic.swift in Sources */,
 				4CEE1F0B2897656C0006B897 /* HomeRouter.swift in Sources */,
 				4C700E6A2896355400097CE4 /* SceneDelegate.swift in Sources */,
@@ -479,7 +537,9 @@
 				4CEE1EE0289723750006B897 /* HomeInteractor.swift in Sources */,
 				4CEE1EE82897261F0006B897 /* HomePresentationLogic.swift in Sources */,
 				4CEE1EEC289737630006B897 /* ProfileDisplayLogic.swift in Sources */,
+				4CEE1F12289771A80006B897 /* NewPostPresenter.swift in Sources */,
 				4CEE1EE62897249C0006B897 /* HomeViewControllerFactory.swift in Sources */,
+				4CEE1F1A289772570006B897 /* NewPostRoutingLogic.swift in Sources */,
 				4CEE1EEA2897262D0006B897 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
