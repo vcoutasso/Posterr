@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C4ADC11289868540032EB73 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4ADC10289868540032EB73 /* User.swift */; };
+		4C4ADC13289869130032EB73 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4ADC12289869130032EB73 /* Post.swift */; };
 		4C700E682896355400097CE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E672896355400097CE4 /* AppDelegate.swift */; };
 		4C700E6A2896355400097CE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E692896355400097CE4 /* SceneDelegate.swift */; };
 		4C700E6C2896355400097CE4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E6B2896355400097CE4 /* TabBarViewController.swift */; };
@@ -60,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C4ADC10289868540032EB73 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4C4ADC12289869130032EB73 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4C700E642896355400097CE4 /* Posterr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posterr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C700E672896355400097CE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C700E692896355400097CE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C4ADC0E2898681C0032EB73 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4C4ADC0F289868290032EB73 /* Models */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4C4ADC0F289868290032EB73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C4ADC10289868540032EB73 /* User.swift */,
+				4C4ADC12289869130032EB73 /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4C700E5B2896355400097CE4 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +170,7 @@
 			children = (
 				4C700E9728963C4400097CE4 /* App */,
 				4C700E9828963C5200097CE4 /* Resources */,
+				4C4ADC0E2898681C0032EB73 /* Common */,
 				4C700E9A28963C7D00097CE4 /* Tabs */,
 				4C700E9928963C5B00097CE4 /* Supporting-Files */,
 			);
@@ -521,6 +543,8 @@
 				4CEE1EFE28973B050006B897 /* ProfileViewControllerFactory.swift in Sources */,
 				4CEE1F1C2897726B0006B897 /* NewPostRouter.swift in Sources */,
 				4CEE1F10289771850006B897 /* NewPostPresentationLogic.swift in Sources */,
+				4C4ADC11289868540032EB73 /* User.swift in Sources */,
+				4C4ADC13289869130032EB73 /* Post.swift in Sources */,
 				4CEE1F15289771CD0006B897 /* NewPostInteractionLogic.swift in Sources */,
 				4CEE1EDD289722F30006B897 /* HomeDisplayLogic.swift in Sources */,
 				4CEE1F00289742520006B897 /* NewPostViewController.swift in Sources */,
