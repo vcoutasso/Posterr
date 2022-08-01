@@ -26,15 +26,38 @@ final class NewPostViewController: UIViewController {
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.font = .preferredFont(forTextStyle: .body)
         textView.textAlignment = .left
+        textView.addSubview(placeholderLabel)
         textView.delegate = self
 
         return textView
     }()
+
+    private lazy var placeholderLabel: UILabel = {
+        let label = UILabel()
+        label.text = "What's up?"
+        label.font = .preferredFont(forTextStyle: .body)
+        // Align with `textView` cursor
+        label.frame.origin = CGPoint(x: 5,
+                                     y: UIFont.preferredFont(forTextStyle: .body).pointSize / 2)
+        label.textColor = .tertiaryLabel
+        label.textAlignment = .left
+        label.sizeToFit()
+
+        return label
+    }()
 }
 
+// MARK: - Display Logic
+
+extension NewPostViewController: NewPostDisplayLogic {
+
+}
+
+// MARK: - UITextViewDelegate
+
 extension NewPostViewController: UITextViewDelegate {
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        view.setNeedsLayout()
+    func textViewDidChange(_ textView: UITextView) {
+        placeholderLabel.isHidden = !textView.text.isEmpty
     }
 }
 
@@ -74,3 +97,4 @@ private extension NewPostViewController {
         ])
     }
 }
+

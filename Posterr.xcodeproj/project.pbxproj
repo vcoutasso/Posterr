@@ -32,6 +32,7 @@
 		4CEE1F00289742520006B897 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EFF289742520006B897 /* NewPostViewController.swift */; };
 		4CEE1F092897653C0006B897 /* HomeRoutingLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1F082897653C0006B897 /* HomeRoutingLogic.swift */; };
 		4CEE1F0B2897656C0006B897 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1F0A2897656C0006B897 /* HomeRouter.swift */; };
+		4CEE1F0D289768D70006B897 /* NewPostDisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1F0C289768D70006B897 /* NewPostDisplayLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		4CEE1EFF289742520006B897 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		4CEE1F082897653C0006B897 /* HomeRoutingLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRoutingLogic.swift; sourceTree = "<group>"; };
 		4CEE1F0A2897656C0006B897 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		4CEE1F0C289768D70006B897 /* NewPostDisplayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostDisplayLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +315,7 @@
 		4CEE1F042897642F0006B897 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4CEE1F0C289768D70006B897 /* NewPostDisplayLogic.swift */,
 				4CEE1EFF289742520006B897 /* NewPostViewController.swift */,
 			);
 			path = Views;
@@ -468,6 +471,7 @@
 				4CEE1EF0289737AC0006B897 /* ProfilePresentationLogic.swift in Sources */,
 				4CEE1F0B2897656C0006B897 /* HomeRouter.swift in Sources */,
 				4C700E6A2896355400097CE4 /* SceneDelegate.swift in Sources */,
+				4CEE1F0D289768D70006B897 /* NewPostDisplayLogic.swift in Sources */,
 				4CEE1EF928973A820006B897 /* ProfileInteractor.swift in Sources */,
 				4CEE1EF728973A3D0006B897 /* ProfileInteractionLogic.swift in Sources */,
 				4C700E9E28963CA000097CE4 /* HomeViewController.swift in Sources */,
