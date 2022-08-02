@@ -4,5 +4,6 @@ protocol NewPostInteractionLogic: AnyObject {
     var presenter: NewPostPresentationLogic { get }
 
     func contentChange(request: NewPost.ContentChange.Request)
-    func post(request: NewPost.Post.Request)
+    func makePost(request: NewPost.Make.Request)
+    func cancelPost(request: NewPost.Cancel.Request)
 }

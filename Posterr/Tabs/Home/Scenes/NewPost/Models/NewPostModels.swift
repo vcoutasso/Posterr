@@ -20,9 +20,20 @@ enum NewPost {
         }
     }
 
-    enum Post {
+    enum Make {
         struct Request {
             let content: String
+        }
+
+        struct Response {
+        }
+
+        struct ViewModel {
+        }
+    }
+
+    enum Cancel {
+        struct Request {
         }
 
         struct Response {

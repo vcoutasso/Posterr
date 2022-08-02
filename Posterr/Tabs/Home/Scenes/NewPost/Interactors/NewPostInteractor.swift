@@ -26,12 +26,13 @@ final class NewPostInteractor: NewPostInteractionLogic, NewPostDataStore {
     }
 
 
-    func post(request: NewPost.Post.Request) {
-        post = Post(
-            id: UUID(),
+    func makePost(request: NewPost.Make.Request) {
+        let newPost = Post.new(
             authorId: user.id,
-            content: request.content,
-            originalPostId: nil,
-            quote: nil)
+            content: request.content)
+        post = newPost
+    }
+
+    func cancelPost(request: NewPost.Cancel.Request) {
     }
 }

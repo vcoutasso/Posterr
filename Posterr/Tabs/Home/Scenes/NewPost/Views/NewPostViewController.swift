@@ -107,8 +107,8 @@ private extension NewPostViewController {
 
     @objc
     func didTapDoneButton() {
-        let request = NewPost.Post.Request(content: textView.text)
-        interactor.post(request: request)
+        let request = NewPost.Make.Request(content: textView.text)
+        interactor.makePost(request: request)
 
         router.routeToParent()
     }
