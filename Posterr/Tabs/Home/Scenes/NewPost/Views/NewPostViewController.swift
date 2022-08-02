@@ -51,19 +51,35 @@ final class NewPostViewController: UIViewController {
 
         return label
     }()
+
+    private lazy var contentLengthLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .preferredFont(forTextStyle: .footnote)
+
+        return label
+    }()
 }
 
 // MARK: - Display Logic
 
 extension NewPostViewController: NewPostDisplayLogic {
+    func displayUpdatedInterface(viewModel: NewPost.ContentDidChange.ViewModel) {
+        placeholderLabel.isHidden = viewModel.isPlaceholderHidden
 
+        contentLengthLabel.text = "\(textView.text.count)/\(viewModel.maxLength)"
+        contentLengthLabel.textColor = viewModel.isTextTooLong ? .systemRed : .secondaryLabel
+
+        navigationItem.rightBarButtonItem?.isEnabled = viewModel.isPostValid
+    }
 }
 
 // MARK: - UITextViewDelegate
 
 extension NewPostViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
-        placeholderLabel.isHidden = !textView.text.isEmpty
+        interactor.contentDidChange(
+            request: NewPost.ContentDidChange.Request(textLength: textView.text.count))
     }
 }
 
@@ -94,13 +110,25 @@ private extension NewPostViewController {
 
     func setupSubviews() {
         view.addSubview(textView)
+        view.addSubview(contentLengthLabel)
 
         NSLayoutConstraint.activate([
             textView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             textView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
             textView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
             textView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+            contentLengthLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+            contentLengthLabel.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -5),
         ])
+    }
+
+    func updatePlaceholderVisibility() {
+        placeholderLabel.isHidden = !textView.text.isEmpty
+    }
+
+    func updateContentLengthLabel() {
+        contentLengthLabel.text = "\(textView.text.count)/777"
+        contentLengthLabel.textColor = textView.text.count > 777 ? UIColor.systemRed : UIColor.secondaryLabel
     }
 }
 
