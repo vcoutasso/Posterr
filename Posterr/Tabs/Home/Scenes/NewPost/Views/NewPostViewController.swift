@@ -72,14 +72,24 @@ extension NewPostViewController: NewPostDisplayLogic {
 
         navigationItem.rightBarButtonItem?.isEnabled = viewModel.isPostValid
     }
+
+    func displayDidPost(viewModel: NewPost.Post.ViewModel) {
+        if viewModel.didSucceed {
+            router.routeToParent()
+        }
+    }
+
+    func displayDidCancel(viewModel: NewPost.Cancel.ViewModel) {
+        router.routeToParent()
+    }
 }
 
 // MARK: - UITextViewDelegate
 
 extension NewPostViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
-        interactor.contentChange(
-            request: NewPost.ContentChange.Request(textLength: textView.text.count))
+        let request = NewPost.ContentChange.Request(textLength: textView.text.count)
+        interactor.contentChange(request: request)
     }
 }
 
@@ -102,15 +112,14 @@ private extension NewPostViewController {
 
     @objc
     func didTapCancelButton() {
-        router.routeToParent()
+        let request = NewPost.Cancel.Request()
+        interactor.cancelPost(request: request)
     }
 
     @objc
     func didTapDoneButton() {
-        let request = NewPost.Make.Request(content: textView.text)
+        let request = NewPost.Post.Request(content: textView.text)
         interactor.makePost(request: request)
-
-        router.routeToParent()
     }
 
     func setupSubviews() {

@@ -20,15 +20,17 @@ enum NewPost {
         }
     }
 
-    enum Make {
+    enum Post {
         struct Request {
             let content: String
         }
 
         struct Response {
+            let didSucceed: Bool
         }
 
         struct ViewModel {
+            let didSucceed: Bool
         }
     }
 

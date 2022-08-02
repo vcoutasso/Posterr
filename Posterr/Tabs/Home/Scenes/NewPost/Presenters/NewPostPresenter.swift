@@ -14,4 +14,15 @@ final class NewPostPresenter: NewPostPresentationLogic {
 
         displayLogicDelegate.displayUpdatedInterface(viewModel: viewModel)
     }
+
+    func presentCompletedPost(response: NewPost.Post.Response) {
+        let viewModel = NewPost.Post.ViewModel(didSucceed: response.didSucceed)
+        displayLogicDelegate?.displayDidPost(viewModel: viewModel)
+    }
+
+    func presentCancelledPost(response: NewPost.Cancel.Response) {
+        let viewModel = NewPost.Cancel.ViewModel()
+        displayLogicDelegate?.displayDidCancel(viewModel: viewModel)
+    }
+
 }

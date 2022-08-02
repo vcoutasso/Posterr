@@ -26,13 +26,18 @@ final class NewPostInteractor: NewPostInteractionLogic, NewPostDataStore {
     }
 
 
-    func makePost(request: NewPost.Make.Request) {
+    func makePost(request: NewPost.Post.Request) {
         let newPost = Post.new(
             authorId: user.id,
             content: request.content)
         post = newPost
+
+        let response = NewPost.Post.Response(didSucceed: true)
+        presenter.presentCompletedPost(response: response)
     }
 
     func cancelPost(request: NewPost.Cancel.Request) {
+        let response = NewPost.Cancel.Response()
+        presenter.presentCancelledPost(response: response)
     }
 }
