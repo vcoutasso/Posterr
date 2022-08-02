@@ -1,7 +1,7 @@
 import Foundation
 
 enum NewPost {
-    enum ContentDidChange {
+    enum ContentChange {
         struct Request {
             let textLength: Int
         }
@@ -17,6 +17,18 @@ enum NewPost {
             let isTextTooLong: Bool
             let isPostValid: Bool
             let maxLength: Int
+        }
+    }
+
+    enum Post {
+        struct Request {
+            let content: String
+        }
+
+        struct Response {
+        }
+
+        struct ViewModel {
         }
     }
 }

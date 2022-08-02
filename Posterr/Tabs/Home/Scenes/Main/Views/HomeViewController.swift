@@ -3,10 +3,10 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
-    private let interactor: HomeInteractionLogic
+    private(set) var interactor: HomeInteractionLogic & HomeDataStore
     private let router: HomeRoutingLogic
 
-    init(interactor: HomeInteractionLogic, router: HomeRoutingLogic) {
+    init(interactor: HomeInteractionLogic & HomeDataStore, router: HomeRoutingLogic) {
         self.interactor = interactor
         self.router = router
 

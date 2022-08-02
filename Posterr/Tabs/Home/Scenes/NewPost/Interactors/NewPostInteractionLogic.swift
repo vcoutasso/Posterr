@@ -3,5 +3,6 @@ import Foundation
 protocol NewPostInteractionLogic: AnyObject {
     var presenter: NewPostPresentationLogic { get }
 
-    func contentDidChange(request: NewPost.ContentDidChange.Request)
+    func contentChange(request: NewPost.ContentChange.Request)
+    func post(request: NewPost.Post.Request)
 }

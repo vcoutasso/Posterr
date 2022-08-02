@@ -20,6 +20,11 @@
 		4C700E9E28963CA000097CE4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E9D28963CA000097CE4 /* HomeViewController.swift */; };
 		4C700EA028963CB300097CE4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E9F28963CB300097CE4 /* ProfileViewController.swift */; };
 		4C7D204A2898BE1B0021A594 /* NewPostModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D20492898BE1B0021A594 /* NewPostModels.swift */; };
+		4C7D204D2898C9FA0021A594 /* HomeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D204C2898C9FA0021A594 /* HomeDataStore.swift */; };
+		4C7D204F2898CA470021A594 /* HomeDataPassing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D204E2898CA470021A594 /* HomeDataPassing.swift */; };
+		4C7D20522898CB240021A594 /* NewPostDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D20512898CB240021A594 /* NewPostDataStore.swift */; };
+		4C7D20542898CB4D0021A594 /* NewPostDataPassing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D20532898CB4D0021A594 /* NewPostDataPassing.swift */; };
+		4C7D20572898D5B00021A594 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D20562898D5B00021A594 /* UINavigationController+.swift */; };
 		4CEE1EDD289722F30006B897 /* HomeDisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EDC289722F30006B897 /* HomeDisplayLogic.swift */; };
 		4CEE1EE0289723750006B897 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EDF289723750006B897 /* HomeInteractor.swift */; };
 		4CEE1EE2289723830006B897 /* HomeInteractionLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1EE1289723830006B897 /* HomeInteractionLogic.swift */; };
@@ -80,6 +85,11 @@
 		4C700E9D28963CA000097CE4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4C700E9F28963CB300097CE4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4C7D20492898BE1B0021A594 /* NewPostModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostModels.swift; sourceTree = "<group>"; };
+		4C7D204C2898C9FA0021A594 /* HomeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataStore.swift; sourceTree = "<group>"; };
+		4C7D204E2898CA470021A594 /* HomeDataPassing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataPassing.swift; sourceTree = "<group>"; };
+		4C7D20512898CB240021A594 /* NewPostDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostDataStore.swift; sourceTree = "<group>"; };
+		4C7D20532898CB4D0021A594 /* NewPostDataPassing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostDataPassing.swift; sourceTree = "<group>"; };
+		4C7D20562898D5B00021A594 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 		4CEE1EDC289722F30006B897 /* HomeDisplayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDisplayLogic.swift; sourceTree = "<group>"; };
 		4CEE1EDF289723750006B897 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		4CEE1EE1289723830006B897 /* HomeInteractionLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractionLogic.swift; sourceTree = "<group>"; };
@@ -133,6 +143,7 @@
 		4C4ADC0E2898681C0032EB73 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4C7D20552898D5A30021A594 /* Extensions */,
 				4C4ADC0F289868290032EB73 /* Models */,
 			);
 			path = Common;
@@ -259,6 +270,32 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		4C7D204B2898C98D0021A594 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4C7D204C2898C9FA0021A594 /* HomeDataStore.swift */,
+				4C7D204E2898CA470021A594 /* HomeDataPassing.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4C7D20502898CB190021A594 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4C7D20512898CB240021A594 /* NewPostDataStore.swift */,
+				4C7D20532898CB4D0021A594 /* NewPostDataPassing.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4C7D20552898D5A30021A594 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4C7D20562898D5B00021A594 /* UINavigationController+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4CEE1EDB289722C50006B897 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +378,7 @@
 		4CEE1F02289763940006B897 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				4C7D204B2898C98D0021A594 /* Data */,
 				4CEE1EE42897248D0006B897 /* Utils */,
 				4CEE1EDB289722C50006B897 /* Views */,
 				4CEE1EDE289723270006B897 /* Interactors */,
@@ -353,6 +391,7 @@
 		4CEE1F03289764130006B897 /* NewPost */ = {
 			isa = PBXGroup;
 			children = (
+				4C7D20502898CB190021A594 /* Data */,
 				4C7D20482898BE100021A594 /* Models */,
 				4CEE1F1D289772890006B897 /* Utils */,
 				4CEE1F042897642F0006B897 /* Views */,
@@ -547,6 +586,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CEE1F17289771E00006B897 /* NewPostInteractor.swift in Sources */,
+				4C7D204F2898CA470021A594 /* HomeDataPassing.swift in Sources */,
+				4C7D20542898CB4D0021A594 /* NewPostDataPassing.swift in Sources */,
 				4CEE1EE2289723830006B897 /* HomeInteractionLogic.swift in Sources */,
 				4C700E6C2896355400097CE4 /* TabBarViewController.swift in Sources */,
 				4CEE1F092897653C0006B897 /* HomeRoutingLogic.swift in Sources */,
@@ -559,6 +600,7 @@
 				4CEE1F15289771CD0006B897 /* NewPostInteractionLogic.swift in Sources */,
 				4CEE1EDD289722F30006B897 /* HomeDisplayLogic.swift in Sources */,
 				4CEE1F00289742520006B897 /* NewPostViewController.swift in Sources */,
+				4C7D20522898CB240021A594 /* NewPostDataStore.swift in Sources */,
 				4C700EA028963CB300097CE4 /* ProfileViewController.swift in Sources */,
 				4CEE1F1F289772950006B897 /* NewPostViewControllerFactory.swift in Sources */,
 				4CEE1EF0289737AC0006B897 /* ProfilePresentationLogic.swift in Sources */,
@@ -572,10 +614,12 @@
 				4CEE1EE0289723750006B897 /* HomeInteractor.swift in Sources */,
 				4CEE1EE82897261F0006B897 /* HomePresentationLogic.swift in Sources */,
 				4CEE1EEC289737630006B897 /* ProfileDisplayLogic.swift in Sources */,
+				4C7D20572898D5B00021A594 /* UINavigationController+.swift in Sources */,
 				4C7D204A2898BE1B0021A594 /* NewPostModels.swift in Sources */,
 				4CEE1F12289771A80006B897 /* NewPostPresenter.swift in Sources */,
 				4CEE1EE62897249C0006B897 /* HomeViewControllerFactory.swift in Sources */,
 				4CEE1F1A289772570006B897 /* NewPostRoutingLogic.swift in Sources */,
+				4C7D204D2898C9FA0021A594 /* HomeDataStore.swift in Sources */,
 				4CEE1EEA2897262D0006B897 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

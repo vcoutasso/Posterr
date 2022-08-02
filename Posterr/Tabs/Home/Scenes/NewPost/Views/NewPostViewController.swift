@@ -2,10 +2,10 @@ import Foundation
 import UIKit
 
 final class NewPostViewController: UIViewController {
-    private let interactor: NewPostInteractionLogic
+    private(set) var interactor: NewPostInteractionLogic & NewPostDataStore
     private let router: NewPostRoutingLogic
 
-    init(interactor: NewPostInteractionLogic, router: NewPostRoutingLogic) {
+    init(interactor: NewPostInteractionLogic & NewPostDataStore, router: NewPostRoutingLogic) {
         self.interactor = interactor
         self.router = router
         
@@ -64,7 +64,7 @@ final class NewPostViewController: UIViewController {
 // MARK: - Display Logic
 
 extension NewPostViewController: NewPostDisplayLogic {
-    func displayUpdatedInterface(viewModel: NewPost.ContentDidChange.ViewModel) {
+    func displayUpdatedInterface(viewModel: NewPost.ContentChange.ViewModel) {
         placeholderLabel.isHidden = viewModel.isPlaceholderHidden
 
         contentLengthLabel.text = "\(textView.text.count)/\(viewModel.maxLength)"
@@ -78,8 +78,8 @@ extension NewPostViewController: NewPostDisplayLogic {
 
 extension NewPostViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
-        interactor.contentDidChange(
-            request: NewPost.ContentDidChange.Request(textLength: textView.text.count))
+        interactor.contentChange(
+            request: NewPost.ContentChange.Request(textLength: textView.text.count))
     }
 }
 
@@ -96,16 +96,21 @@ private extension NewPostViewController {
             barButtonSystemItem: .done,
             target: self,
             action: #selector(didTapDoneButton))
+
+        navigationItem.rightBarButtonItem?.isEnabled = false
     }
 
     @objc
     func didTapCancelButton() {
-        router.routeToPrevious()
+        router.routeToParent()
     }
 
     @objc
     func didTapDoneButton() {
+        let request = NewPost.Post.Request(content: textView.text)
+        interactor.post(request: request)
 
+        router.routeToParent()
     }
 
     func setupSubviews() {
