@@ -3,7 +3,7 @@ import Foundation
 final class NewPostPresenter: NewPostPresentationLogic {
     weak var displayLogicDelegate: NewPostDisplayLogic?
 
-    func presentUpdatedInterface(response: NewPost.ContentChange.Response) {
+    func presentUpdatedInterface(_ response: NewPost.ContentChange.Response) {
         guard let displayLogicDelegate = displayLogicDelegate else { return }
 
         let viewModel = NewPost.ContentChange.ViewModel(
@@ -12,17 +12,17 @@ final class NewPostPresenter: NewPostPresentationLogic {
             isPostValid: response.isLengthValid && !response.isEmpty,
             maxLength: response.maxLength)
 
-        displayLogicDelegate.displayUpdatedInterface(viewModel: viewModel)
+        displayLogicDelegate.displayUpdatedInterface(viewModel)
     }
 
-    func presentCompletedPost(response: NewPost.Post.Response) {
+    func presentCompletedPost(_ response: NewPost.Post.Response) {
         let viewModel = NewPost.Post.ViewModel(didSucceed: response.didSucceed)
-        displayLogicDelegate?.displayDidPost(viewModel: viewModel)
+        displayLogicDelegate?.displayDidPost(viewModel)
     }
 
-    func presentCancelledPost(response: NewPost.Cancel.Response) {
+    func presentCancelledPost(_ response: NewPost.Cancel.Response) {
         let viewModel = NewPost.Cancel.ViewModel()
-        displayLogicDelegate?.displayDidCancel(viewModel: viewModel)
+        displayLogicDelegate?.displayDidCancel(viewModel)
     }
 
 }

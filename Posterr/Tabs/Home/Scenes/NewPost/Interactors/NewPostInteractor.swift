@@ -13,7 +13,7 @@ final class NewPostInteractor: NewPostInteractionLogic, NewPostDataStore {
         self.user = user
     }
 
-    func contentChange(request: NewPost.ContentChange.Request) {
+    func contentChange(_ request: NewPost.ContentChange.Request) {
         let isValid = request.textLength > 0 && request.textLength <= maxTextLength
         let isEmpty = request.textLength == 0
 
@@ -22,22 +22,22 @@ final class NewPostInteractor: NewPostInteractionLogic, NewPostDataStore {
             isEmpty: isEmpty,
             maxLength: maxTextLength)
 
-        presenter.presentUpdatedInterface(response: response)
+        presenter.presentUpdatedInterface(response)
     }
 
 
-    func makePost(request: NewPost.Post.Request) {
+    func makePost(_ request: NewPost.Post.Request) {
         let newPost = Post.new(
             authorId: user.id,
             content: request.content)
         post = newPost
 
         let response = NewPost.Post.Response(didSucceed: true)
-        presenter.presentCompletedPost(response: response)
+        presenter.presentCompletedPost(response)
     }
 
-    func cancelPost(request: NewPost.Cancel.Request) {
+    func cancelPost(_ request: NewPost.Cancel.Request) {
         let response = NewPost.Cancel.Response()
-        presenter.presentCancelledPost(response: response)
+        presenter.presentCancelledPost(response)
     }
 }

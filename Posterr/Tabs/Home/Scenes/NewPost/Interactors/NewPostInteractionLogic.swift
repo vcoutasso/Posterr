@@ -3,7 +3,7 @@ import Foundation
 protocol NewPostInteractionLogic: AnyObject {
     var presenter: NewPostPresentationLogic { get }
 
-    func contentChange(request: NewPost.ContentChange.Request)
-    func makePost(request: NewPost.Post.Request)
-    func cancelPost(request: NewPost.Cancel.Request)
+    func contentChange(_ request: NewPost.ContentChange.Request)
+    func makePost(_ request: NewPost.Post.Request)
+    func cancelPost(_ request: NewPost.Cancel.Request)
 }

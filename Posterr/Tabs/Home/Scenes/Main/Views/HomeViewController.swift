@@ -2,11 +2,13 @@ import Foundation
 import UIKit
 
 final class HomeViewController: UIViewController {
+    typealias Interactor = HomeInteractionLogic & HomeDataStore
+    typealias Router = HomeRoutingLogic & HomeDataPassing
 
-    private(set) var interactor: HomeInteractionLogic & HomeDataStore
-    private let router: HomeRoutingLogic
+    private(set) var interactor: Interactor
+    private let router: Router
 
-    init(interactor: HomeInteractionLogic & HomeDataStore, router: HomeRoutingLogic) {
+    init(interactor: Interactor, router: Router) {
         self.interactor = interactor
         self.router = router
 
@@ -51,7 +53,9 @@ final class HomeViewController: UIViewController {
 // MARK: - Home Display Logic
 
 extension HomeViewController: HomeDisplayLogic {
-    
+    func displayNewPostView(_ viewModel: Home.NewPost.ViewModel) {
+        router.routeToNewPost()
+    }
 }
 
 // MARK: - Utils
@@ -85,7 +89,8 @@ private extension HomeViewController {
 
     @objc
     func didTapNewPostButton() {
-        router.routeToNewPost()
+        let request = Home.NewPost.Request()
+        interactor.newPost(request)
     }
 
     func configureNewPostButton() {

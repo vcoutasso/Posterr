@@ -3,8 +3,8 @@ import Foundation
 protocol NewPostPresentationLogic: AnyObject {
     var displayLogicDelegate: NewPostDisplayLogic? { get set }
 
-    func presentUpdatedInterface(response: NewPost.ContentChange.Response)
-    func presentCompletedPost(response: NewPost.Post.Response)
-    func presentCancelledPost(response: NewPost.Cancel.Response)
+    func presentUpdatedInterface(_ response: NewPost.ContentChange.Response)
+    func presentCompletedPost(_ response: NewPost.Post.Response)
+    func presentCancelledPost(_ response: NewPost.Cancel.Response)
 }
 

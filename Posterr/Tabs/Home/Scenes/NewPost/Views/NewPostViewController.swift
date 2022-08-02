@@ -64,7 +64,7 @@ final class NewPostViewController: UIViewController {
 // MARK: - Display Logic
 
 extension NewPostViewController: NewPostDisplayLogic {
-    func displayUpdatedInterface(viewModel: NewPost.ContentChange.ViewModel) {
+    func displayUpdatedInterface(_ viewModel: NewPost.ContentChange.ViewModel) {
         placeholderLabel.isHidden = viewModel.isPlaceholderHidden
 
         contentLengthLabel.text = "\(textView.text.count)/\(viewModel.maxLength)"
@@ -73,13 +73,13 @@ extension NewPostViewController: NewPostDisplayLogic {
         navigationItem.rightBarButtonItem?.isEnabled = viewModel.isPostValid
     }
 
-    func displayDidPost(viewModel: NewPost.Post.ViewModel) {
+    func displayDidPost(_ viewModel: NewPost.Post.ViewModel) {
         if viewModel.didSucceed {
             router.routeToParent()
         }
     }
 
-    func displayDidCancel(viewModel: NewPost.Cancel.ViewModel) {
+    func displayDidCancel(_ viewModel: NewPost.Cancel.ViewModel) {
         router.routeToParent()
     }
 }
@@ -89,7 +89,7 @@ extension NewPostViewController: NewPostDisplayLogic {
 extension NewPostViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         let request = NewPost.ContentChange.Request(textLength: textView.text.count)
-        interactor.contentChange(request: request)
+        interactor.contentChange(request)
     }
 }
 
@@ -113,13 +113,13 @@ private extension NewPostViewController {
     @objc
     func didTapCancelButton() {
         let request = NewPost.Cancel.Request()
-        interactor.cancelPost(request: request)
+        interactor.cancelPost(request)
     }
 
     @objc
     func didTapDoneButton() {
         let request = NewPost.Post.Request(content: textView.text)
-        interactor.makePost(request: request)
+        interactor.makePost(request)
     }
 
     func setupSubviews() {

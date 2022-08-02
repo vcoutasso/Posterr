@@ -9,6 +9,13 @@ final class HomeInteractor: HomeInteractionLogic, HomeDataStore {
         self.allPosts = posts
     }
 
+    func newPost(_ request: Home.NewPost.Request) {
+        let response = Home.NewPost.Response()
+        presenter.presentNewPostView(response)
+    }
+}
+
+extension HomeInteractor {
     func addPost(_ post: Post) {
         allPosts.append(post)
     }
