@@ -4,15 +4,25 @@ import UIKit
 final class HomeViewController: UIViewController {
     typealias Interactor = HomeInteractionLogic & HomeDataStore
     typealias Router = HomeRoutingLogic & HomeDataPassing
+    typealias Adapter = PostTableViewAdapter<HomeViewController>
 
     private(set) var interactor: Interactor
     private let router: Router
+    private let tableAdapter: Adapter
+    private lazy var postList: PostListProtocol = {
+        PostList(delegate: tableAdapter, dataSource: tableAdapter, tableView: UITableView())
+    }()
 
-    init(interactor: Interactor, router: Router) {
+    init(interactor: Interactor, router: Router, tableAdapter: Adapter, postList: PostListProtocol? = nil) {
         self.interactor = interactor
         self.router = router
+        self.tableAdapter = tableAdapter
 
         super.init(nibName: nil, bundle: nil)
+
+        if let postList = postList {
+            self.postList = postList
+        }
 
         setupTabBarItem()
         setupNavigationBar()
@@ -25,9 +35,11 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
 
+        view.backgroundColor = .white
         setupSubviews()
+
+        requestPosts()
     }
 
     override func viewDidLayoutSubviews() {
@@ -53,6 +65,10 @@ final class HomeViewController: UIViewController {
 // MARK: - Home Display Logic
 
 extension HomeViewController: HomeDisplayLogic {
+    func displayPosts(_ viewModel: Home.Posts.ViewModel) {
+        postList.reloadData()
+    }
+
     func displayNewPostView(_ viewModel: Home.NewPost.ViewModel) {
         router.routeToNewPost()
     }
@@ -79,16 +95,26 @@ private extension HomeViewController {
     }
 
     func setupSubviews() {
+        view.addSubview(postList.tableView)
         view.addSubview(newPostButton)
 
         NSLayoutConstraint.activate([
+            postList.tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            postList.tableView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            postList.tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            postList.tableView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
             newPostButton.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
             newPostButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
         ])
     }
 
+    func requestPosts() {
+        let request = Home.Posts.Request()
+        interactor.fetchPosts(request)
+    }
+
     @objc
-    func didTapNewPostButton() {
+    private func didTapNewPostButton() {
         let request = Home.NewPost.Request()
         interactor.newPost(request)
     }

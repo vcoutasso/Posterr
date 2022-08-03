@@ -1,5 +1,5 @@
 import Foundation
 
-protocol ProfileDisplayLogic: AnyObject {
+protocol ProfileDisplayLogic: DisplayLogicDelegate {
 
 }

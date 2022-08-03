@@ -7,4 +7,9 @@ final class HomePresenter: HomePresentationLogic {
         let viewModel = Home.NewPost.ViewModel()
         displayLogicDelegate?.displayNewPostView(viewModel)
     }
+
+    func presentPosts(_ response: Home.Posts.Response) {
+        let viewModel = Home.Posts.ViewModel(posts: [])
+        displayLogicDelegate?.displayPosts(viewModel)
+    }
 }

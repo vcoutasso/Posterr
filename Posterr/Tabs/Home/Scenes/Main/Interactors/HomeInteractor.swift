@@ -13,6 +13,11 @@ final class HomeInteractor: HomeInteractionLogic, HomeDataStore {
         let response = Home.NewPost.Response()
         presenter.presentNewPostView(response)
     }
+
+    func fetchPosts(_ request: Home.Posts.Request) {
+        let response = Home.Posts.Response()
+        presenter.presentPosts(response)
+    }
 }
 
 extension HomeInteractor {

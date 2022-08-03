@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C42AE76289AA435001589A7 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE75289AA435001589A7 /* TableViewAdapter.swift */; };
+		4C42AE78289AA51B001589A7 /* PostTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE77289AA51B001589A7 /* PostTableViewAdapter.swift */; };
+		4C42AE7A289AA6B8001589A7 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE79289AA6B8001589A7 /* PostTableViewCell.swift */; };
+		4C42AE7C289AA727001589A7 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE7B289AA727001589A7 /* UITableView+.swift */; };
+		4C42AE81289AA7A4001589A7 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE80289AA7A4001589A7 /* ReusableView.swift */; };
+		4C42AE85289AA827001589A7 /* CodedViewLifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE84289AA827001589A7 /* CodedViewLifecycle.swift */; };
+		4C42AE92289AB396001589A7 /* DisplayLogicDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE91289AB396001589A7 /* DisplayLogicDelegate.swift */; };
+		4C42AE94289AB512001589A7 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE93289AB512001589A7 /* PostList.swift */; };
 		4C4ADC11289868540032EB73 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4ADC10289868540032EB73 /* User.swift */; };
 		4C4ADC13289869130032EB73 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4ADC12289869130032EB73 /* Post.swift */; };
 		4C700E682896355400097CE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E672896355400097CE4 /* AppDelegate.swift */; };
@@ -83,6 +91,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C42AE75289AA435001589A7 /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
+		4C42AE77289AA51B001589A7 /* PostTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewAdapter.swift; sourceTree = "<group>"; };
+		4C42AE79289AA6B8001589A7 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		4C42AE7B289AA727001589A7 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		4C42AE80289AA7A4001589A7 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReusableView.swift; path = ../../../../../Documents/ReusableView.swift; sourceTree = "<group>"; };
+		4C42AE84289AA827001589A7 /* CodedViewLifecycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedViewLifecycle.swift; sourceTree = "<group>"; };
+		4C42AE88289AA886001589A7 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		4C42AE91289AB396001589A7 /* DisplayLogicDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLogicDelegate.swift; sourceTree = "<group>"; };
+		4C42AE93289AB512001589A7 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		4C4ADC10289868540032EB73 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4C4ADC12289869130032EB73 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4C700E642896355400097CE4 /* Posterr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posterr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,9 +187,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C42AE73289AA30F001589A7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4C42AE87289AA882001589A7 /* Misc */,
+				4C42AE86289AA865001589A7 /* Post */,
+				4C42AE80289AA7A4001589A7 /* ReusableView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4C42AE86289AA865001589A7 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				4C42AE77289AA51B001589A7 /* PostTableViewAdapter.swift */,
+				4C42AE79289AA6B8001589A7 /* PostTableViewCell.swift */,
+				4C42AE93289AB512001589A7 /* PostList.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		4C42AE87289AA882001589A7 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				4C42AE75289AA435001589A7 /* TableViewAdapter.swift */,
+				4C42AE88289AA886001589A7 /* ReusableView.swift */,
+				4C42AE84289AA827001589A7 /* CodedViewLifecycle.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		4C42AE90289AB389001589A7 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				4C42AE91289AB396001589A7 /* DisplayLogicDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		4C4ADC0E2898681C0032EB73 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4C42AE90289AB389001589A7 /* Delegates */,
+				4C42AE73289AA30F001589A7 /* UI */,
 				4C7D20552898D5A30021A594 /* Extensions */,
 				4C4ADC0F289868290032EB73 /* Models */,
 			);
@@ -324,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				4C7D20562898D5B00021A594 /* UINavigationController+.swift */,
+				4C42AE7B289AA727001589A7 /* UITableView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -762,13 +820,16 @@
 				4CEE1F17289771E00006B897 /* NewPostInteractor.swift in Sources */,
 				4C7D204F2898CA470021A594 /* HomeDataPassing.swift in Sources */,
 				4C7D20542898CB4D0021A594 /* NewPostDataPassing.swift in Sources */,
+				4C42AE76289AA435001589A7 /* TableViewAdapter.swift in Sources */,
 				4CEE1EE2289723830006B897 /* HomeInteractionLogic.swift in Sources */,
+				4C42AE85289AA827001589A7 /* CodedViewLifecycle.swift in Sources */,
 				4C700E6C2896355400097CE4 /* TabBarViewController.swift in Sources */,
 				4CEE1F092897653C0006B897 /* HomeRoutingLogic.swift in Sources */,
 				4C700E682896355400097CE4 /* AppDelegate.swift in Sources */,
 				4CEE1EFE28973B050006B897 /* ProfileViewControllerFactory.swift in Sources */,
 				4CEE1F1C2897726B0006B897 /* NewPostRouter.swift in Sources */,
 				4CEE1F10289771850006B897 /* NewPostPresentationLogic.swift in Sources */,
+				4C42AE7C289AA727001589A7 /* UITableView+.swift in Sources */,
 				4C4ADC11289868540032EB73 /* User.swift in Sources */,
 				4C4ADC13289869130032EB73 /* Post.swift in Sources */,
 				4CEE1F15289771CD0006B897 /* NewPostInteractionLogic.swift in Sources */,
@@ -779,15 +840,20 @@
 				4CEE1F1F289772950006B897 /* NewPostViewControllerFactory.swift in Sources */,
 				4CEE1EF0289737AC0006B897 /* ProfilePresentationLogic.swift in Sources */,
 				4CEE1F0B2897656C0006B897 /* HomeRouter.swift in Sources */,
+				4C42AE94289AB512001589A7 /* PostList.swift in Sources */,
 				4C700E6A2896355400097CE4 /* SceneDelegate.swift in Sources */,
 				4CEE1F0D289768D70006B897 /* NewPostDisplayLogic.swift in Sources */,
 				4CEE1EF928973A820006B897 /* ProfileInteractor.swift in Sources */,
 				4CEE1EF728973A3D0006B897 /* ProfileInteractionLogic.swift in Sources */,
 				4C700E9E28963CA000097CE4 /* HomeViewController.swift in Sources */,
+				4C42AE78289AA51B001589A7 /* PostTableViewAdapter.swift in Sources */,
+				4C42AE7A289AA6B8001589A7 /* PostTableViewCell.swift in Sources */,
 				4CEE1EFB28973AA00006B897 /* ProfilePresenter.swift in Sources */,
 				4CEE1EE0289723750006B897 /* HomeInteractor.swift in Sources */,
+				4C42AE92289AB396001589A7 /* DisplayLogicDelegate.swift in Sources */,
 				4CEE1EE82897261F0006B897 /* HomePresentationLogic.swift in Sources */,
 				4CEE1EEC289737630006B897 /* ProfileDisplayLogic.swift in Sources */,
+				4C42AE81289AA7A4001589A7 /* ReusableView.swift in Sources */,
 				4C7D20572898D5B00021A594 /* UINavigationController+.swift in Sources */,
 				4C7D204A2898BE1B0021A594 /* NewPostModels.swift in Sources */,
 				4CEE1F12289771A80006B897 /* NewPostPresenter.swift in Sources */,

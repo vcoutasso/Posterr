@@ -6,7 +6,8 @@ enum HomeViewControllerFactory {
         let presenter = HomePresenter()
         let interactor = HomeInteractor(presenter: presenter)
         let router = HomeRouter(dataStore: interactor)
-        let viewController = HomeViewController(interactor: interactor, router: router)
+        let adapter = PostTableViewAdapter<HomeViewController>()
+        let viewController = HomeViewController(interactor: interactor, router: router, tableAdapter: adapter)
         presenter.displayLogicDelegate = viewController
         router.viewController = viewController
 

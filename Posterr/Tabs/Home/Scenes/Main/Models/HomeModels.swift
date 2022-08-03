@@ -11,4 +11,16 @@ enum Home {
         struct ViewModel {
         }
     }
+
+    struct Posts {
+        struct Request {
+        }
+
+        struct Response {
+        }
+
+        struct ViewModel {
+            let posts: [Post]
+        }
+    }
 }
