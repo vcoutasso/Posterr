@@ -13,7 +13,7 @@ final class NewPostInteractor: NewPostInteractionLogic, NewPostDataStore {
         self.user = user
     }
 
-    func contentChange(_ request: NewPost.ContentChange.Request) {
+    func handleContentChange(_ request: NewPost.ContentChange.Request) {
         let isValid = request.textLength > 0 && request.textLength <= maxTextLength
         let isEmpty = request.textLength == 0
 

@@ -2,10 +2,13 @@ import Foundation
 import UIKit
 
 final class NewPostViewController: UIViewController {
-    private(set) var interactor: NewPostInteractionLogic & NewPostDataStore
-    private let router: NewPostRoutingLogic
+    typealias Interactor = NewPostInteractionLogic & NewPostDataStore
+    typealias Router = NewPostRoutingLogic & NewPostDataPassing
 
-    init(interactor: NewPostInteractionLogic & NewPostDataStore, router: NewPostRoutingLogic) {
+    private(set) var interactor: Interactor
+    private let router: Router
+
+    init(interactor: Interactor, router: Router) {
         self.interactor = interactor
         self.router = router
         
@@ -89,7 +92,7 @@ extension NewPostViewController: NewPostDisplayLogic {
 extension NewPostViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         let request = NewPost.ContentChange.Request(textLength: textView.text.count)
-        interactor.contentChange(request)
+        interactor.handleContentChange(request)
     }
 }
 
