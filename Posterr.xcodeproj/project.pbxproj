@@ -24,6 +24,10 @@
 		4C7D20522898CB240021A594 /* NewPostDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D20512898CB240021A594 /* NewPostDataStore.swift */; };
 		4C7D20542898CB4D0021A594 /* NewPostDataPassing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D20532898CB4D0021A594 /* NewPostDataPassing.swift */; };
 		4C7D20572898D5B00021A594 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D20562898D5B00021A594 /* UINavigationController+.swift */; };
+		4CA66C882899DC37004559A1 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA66C872899DC37004559A1 /* HomeInteractorTests.swift */; };
+		4CA66C8A2899DE0A004559A1 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA66C892899DE0A004559A1 /* Fixtures.swift */; };
+		4CA66C8E2899F05B004559A1 /* HomePresentersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA66C8D2899F05B004559A1 /* HomePresentersTest.swift */; };
+		4CA66C902899F0F0004559A1 /* HomeDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA66C8F2899F0F0004559A1 /* HomeDisplayLogicSpy.swift */; };
 		4CDFB1A828996EE400AF45B0 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFB1A728996EE400AF45B0 /* HomeViewControllerTests.swift */; };
 		4CDFB1AD28996F7500AF45B0 /* HomeInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFB1AC28996F7500AF45B0 /* HomeInteractorSpy.swift */; };
 		4CDFB1AF2899701500AF45B0 /* HomePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFB1AE2899701500AF45B0 /* HomePresenterSpy.swift */; };
@@ -93,6 +97,10 @@
 		4C7D20512898CB240021A594 /* NewPostDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostDataStore.swift; sourceTree = "<group>"; };
 		4C7D20532898CB4D0021A594 /* NewPostDataPassing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostDataPassing.swift; sourceTree = "<group>"; };
 		4C7D20562898D5B00021A594 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
+		4CA66C872899DC37004559A1 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
+		4CA66C892899DE0A004559A1 /* Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
+		4CA66C8D2899F05B004559A1 /* HomePresentersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresentersTest.swift; sourceTree = "<group>"; };
+		4CA66C8F2899F0F0004559A1 /* HomeDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDisplayLogicSpy.swift; sourceTree = "<group>"; };
 		4CDFB1A728996EE400AF45B0 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		4CDFB1AC28996F7500AF45B0 /* HomeInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorSpy.swift; sourceTree = "<group>"; };
 		4CDFB1AE2899701500AF45B0 /* HomePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpy.swift; sourceTree = "<group>"; };
@@ -201,6 +209,7 @@
 		4C700E7D2896355600097CE4 /* PosterrTests */ = {
 			isa = PBXGroup;
 			children = (
+				4CA66C8B2899DE5D004559A1 /* Misc */,
 				4CDFB1AA28996F5500AF45B0 /* Doubles */,
 				4CDFB1A928996F2D00AF45B0 /* Tests */,
 			);
@@ -305,6 +314,30 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4CA66C862899DC0C004559A1 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				4CA66C872899DC37004559A1 /* HomeInteractorTests.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		4CA66C8B2899DE5D004559A1 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				4CA66C892899DE0A004559A1 /* Fixtures.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		4CA66C8C2899F040004559A1 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				4CA66C8D2899F05B004559A1 /* HomePresentersTest.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
 		4CDFB1A028996DDE00AF45B0 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +365,8 @@
 		4CDFB1A428996DFE00AF45B0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				4CA66C8C2899F040004559A1 /* Presenters */,
+				4CA66C862899DC0C004559A1 /* Interactors */,
 				4CDFB1A528996E0300AF45B0 /* Views */,
 			);
 			path = Main;
@@ -367,6 +402,7 @@
 				4CDFB1AC28996F7500AF45B0 /* HomeInteractorSpy.swift */,
 				4CDFB1AE2899701500AF45B0 /* HomePresenterSpy.swift */,
 				4CDFB1B12899710C00AF45B0 /* HomeRouterSpy.swift */,
+				4CA66C8F2899F0F0004559A1 /* HomeDisplayLogicSpy.swift */,
 			);
 			path = Spies;
 			sourceTree = "<group>";
@@ -714,10 +750,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA66C8E2899F05B004559A1 /* HomePresentersTest.swift in Sources */,
 				4CDFB1B22899710C00AF45B0 /* HomeRouterSpy.swift in Sources */,
+				4CA66C902899F0F0004559A1 /* HomeDisplayLogicSpy.swift in Sources */,
+				4CA66C882899DC37004559A1 /* HomeInteractorTests.swift in Sources */,
 				4CDFB1AD28996F7500AF45B0 /* HomeInteractorSpy.swift in Sources */,
 				4CDFB1A828996EE400AF45B0 /* HomeViewControllerTests.swift in Sources */,
 				4CDFB1AF2899701500AF45B0 /* HomePresenterSpy.swift in Sources */,
+				4CA66C8A2899DE0A004559A1 /* Fixtures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

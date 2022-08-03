@@ -6,9 +6,15 @@ struct Post: Equatable {
     let content: String
     let originalPostId: UUID?
     let quote: String?
+    let type: PostType
 
-    var type: PostType {
-        originalPostId == nil ? .original : quote == nil ? .repost : .quote
+    private init(id: UUID, authorId: UUID, content: String, originalPostId: UUID? = nil, quote: String? = nil, type: PostType) {
+        self.id = id
+        self.authorId = authorId
+        self.content = content
+        self.originalPostId = originalPostId
+        self.quote = quote
+        self.type = type
     }
 
     enum PostType {
@@ -26,8 +32,7 @@ extension Post {
             id: id,
             authorId: authorId,
             content: content,
-            originalPostId: nil,
-            quote: nil)
+            type: .original)
     }
 
     static func repost(id: UUID = UUID(), authorId: UUID, original: Post) -> Post {
@@ -36,15 +41,16 @@ extension Post {
             authorId: authorId,
             content: original.content,
             originalPostId: original.id,
-            quote: nil)
+            type: .repost)
     }
 
-    static func repost(id: UUID = UUID(), authorId: UUID, original: Post, quote: String) -> Post {
+    static func quote(id: UUID = UUID(), authorId: UUID, original: Post, quote: String) -> Post {
         Post(
             id: id,
             authorId: authorId,
             content: original.content,
             originalPostId: original.id,
-            quote: quote)
+            quote: quote,
+            type: .quote)
     }
 }

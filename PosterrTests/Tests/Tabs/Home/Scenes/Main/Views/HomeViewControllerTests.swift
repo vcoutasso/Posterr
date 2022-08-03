@@ -1,7 +1,7 @@
 import XCTest
 @testable import Posterr
 
-class HomeViewControllerTests: XCTestCase {
+final class HomeViewControllerTests: XCTestCase {
     // MARK: - Dependencies
 
     private let presenterSpy = HomePresenterSpy()

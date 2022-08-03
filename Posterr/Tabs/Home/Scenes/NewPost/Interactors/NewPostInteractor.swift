@@ -25,7 +25,6 @@ final class NewPostInteractor: NewPostInteractionLogic, NewPostDataStore {
         presenter.presentUpdatedInterface(response)
     }
 
-
     func makePost(_ request: NewPost.Post.Request) {
         let newPost = Post.new(
             authorId: user.id,
