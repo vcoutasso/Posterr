@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C42AE76289AA435001589A7 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE75289AA435001589A7 /* TableViewAdapter.swift */; };
-		4C42AE78289AA51B001589A7 /* PostTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE77289AA51B001589A7 /* PostTableViewAdapter.swift */; };
 		4C42AE7A289AA6B8001589A7 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE79289AA6B8001589A7 /* PostTableViewCell.swift */; };
 		4C42AE7C289AA727001589A7 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE7B289AA727001589A7 /* UITableView+.swift */; };
 		4C42AE81289AA7A4001589A7 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE80289AA7A4001589A7 /* ReusableView.swift */; };
@@ -91,8 +89,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C42AE75289AA435001589A7 /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
-		4C42AE77289AA51B001589A7 /* PostTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewAdapter.swift; sourceTree = "<group>"; };
 		4C42AE79289AA6B8001589A7 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		4C42AE7B289AA727001589A7 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		4C42AE80289AA7A4001589A7 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReusableView.swift; path = ../../../../../Documents/ReusableView.swift; sourceTree = "<group>"; };
@@ -200,7 +196,6 @@
 		4C42AE86289AA865001589A7 /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				4C42AE77289AA51B001589A7 /* PostTableViewAdapter.swift */,
 				4C42AE79289AA6B8001589A7 /* PostTableViewCell.swift */,
 				4C42AE93289AB512001589A7 /* PostList.swift */,
 			);
@@ -210,7 +205,6 @@
 		4C42AE87289AA882001589A7 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				4C42AE75289AA435001589A7 /* TableViewAdapter.swift */,
 				4C42AE88289AA886001589A7 /* ReusableView.swift */,
 				4C42AE84289AA827001589A7 /* CodedViewLifecycle.swift */,
 			);
@@ -820,7 +814,6 @@
 				4CEE1F17289771E00006B897 /* NewPostInteractor.swift in Sources */,
 				4C7D204F2898CA470021A594 /* HomeDataPassing.swift in Sources */,
 				4C7D20542898CB4D0021A594 /* NewPostDataPassing.swift in Sources */,
-				4C42AE76289AA435001589A7 /* TableViewAdapter.swift in Sources */,
 				4CEE1EE2289723830006B897 /* HomeInteractionLogic.swift in Sources */,
 				4C42AE85289AA827001589A7 /* CodedViewLifecycle.swift in Sources */,
 				4C700E6C2896355400097CE4 /* TabBarViewController.swift in Sources */,
@@ -846,7 +839,6 @@
 				4CEE1EF928973A820006B897 /* ProfileInteractor.swift in Sources */,
 				4CEE1EF728973A3D0006B897 /* ProfileInteractionLogic.swift in Sources */,
 				4C700E9E28963CA000097CE4 /* HomeViewController.swift in Sources */,
-				4C42AE78289AA51B001589A7 /* PostTableViewAdapter.swift in Sources */,
 				4C42AE7A289AA6B8001589A7 /* PostTableViewCell.swift in Sources */,
 				4CEE1EFB28973AA00006B897 /* ProfilePresenter.swift in Sources */,
 				4CEE1EE0289723750006B897 /* HomeInteractor.swift in Sources */,

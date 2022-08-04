@@ -4,19 +4,17 @@ import UIKit
 final class HomeViewController: UIViewController {
     typealias Interactor = HomeInteractionLogic & HomeDataStore
     typealias Router = HomeRoutingLogic & HomeDataPassing
-    typealias Adapter = PostTableViewAdapter<HomeViewController>
 
     private(set) var interactor: Interactor
     private let router: Router
-    private let tableAdapter: Adapter
+
     private lazy var postList: PostListProtocol = {
-        PostList(delegate: tableAdapter, dataSource: tableAdapter, tableView: UITableView())
+        PostList(delegate: self, dataSource: self, tableView: UITableView())
     }()
 
-    init(interactor: Interactor, router: Router, tableAdapter: Adapter, postList: PostListProtocol? = nil) {
+    init(interactor: Interactor, router: Router, postList: PostListProtocol? = nil) {
         self.interactor = interactor
         self.router = router
-        self.tableAdapter = tableAdapter
 
         super.init(nibName: nil, bundle: nil)
 
@@ -33,6 +31,11 @@ final class HomeViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        postList.reloadData()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,6 +49,8 @@ final class HomeViewController: UIViewController {
         super.viewDidLayoutSubviews()
         configureNewPostButton()
     }
+
+    // MARK: Subviews
 
     private lazy var newPostButton: UIButton = {
         var configuration = UIButton.Configuration.filled()
@@ -74,7 +79,35 @@ extension HomeViewController: HomeDisplayLogic {
     }
 }
 
-// MARK: - Utils
+// MARK: - HomeViewController + UITableViewDataSource
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        interactor.allPosts.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: PostTableViewCell.defaultReuseIdentifier,
+            for: indexPath) as? PostTableViewCell
+        else { return PostTableViewCell() }
+
+        let post = interactor.allPosts[indexPath.row]
+        cell.setupCell(with: post)
+
+        return cell
+    }
+}
+
+// MARK: - HomeViewController + UITableViewDelegate
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+// MARK: - Misc
 
 private extension HomeViewController {
     func setupTabBarItem() {

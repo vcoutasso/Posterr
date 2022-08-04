@@ -20,7 +20,6 @@ enum Home {
         }
 
         struct ViewModel {
-            let posts: [Post]
         }
     }
 }
