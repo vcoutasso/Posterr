@@ -3,7 +3,7 @@ import Foundation
 
 enum Fixtures {
     enum Posts {
-        static let new: Post = .new(content: "", poster: .default)
+        static let new: Post = .new(content: "", author: .default)
         static let repost: Post = .repost(post: new, reposter: .default)
         static let quote: Post = .quote(post: new, quote: "", reposter: .default)
     }

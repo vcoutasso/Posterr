@@ -86,6 +86,14 @@ extension HomeViewController: UITableViewDataSource {
         interactor.allPosts.count
     }
 
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        PostTableViewCell.LayoutMetrics.minimumCellHeight
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: PostTableViewCell.defaultReuseIdentifier,
@@ -93,7 +101,7 @@ extension HomeViewController: UITableViewDataSource {
         else { return PostTableViewCell() }
 
         let post = interactor.allPosts[indexPath.row]
-        cell.setupCell(with: post)
+        cell.configure(with: post)
 
         return cell
     }

@@ -2,15 +2,15 @@ import Foundation
 
 struct Post: Equatable {
     let id: UUID
-    let authorId: UUID
+    let author: User
     let content: String
     let originalPostId: UUID?
     let quote: String?
     let type: PostType
 
-    private init(id: UUID, authorId: UUID, content: String, originalPostId: UUID? = nil, quote: String? = nil, type: PostType) {
+    private init(id: UUID = UUID(), author: User, content: String, originalPostId: UUID? = nil, quote: String? = nil, type: PostType) {
         self.id = id
-        self.authorId = authorId
+        self.author = author
         self.content = content
         self.originalPostId = originalPostId
         self.quote = quote
@@ -27,18 +27,16 @@ struct Post: Equatable {
 // MARK: - Factories
 
 extension Post {
-    static func new(content: String, poster: User) -> Post {
+    static func new(content: String, author: User) -> Post {
         Post(
-            id: UUID(),
-            authorId: poster.id,
+            author: author,
             content: content,
             type: .original)
     }
 
     static func repost(post: Post, reposter: User) -> Post {
         Post(
-            id: UUID(),
-            authorId: reposter.id,
+            author: reposter,
             content: post.content,
             originalPostId: post.id,
             type: .repost)
@@ -46,8 +44,7 @@ extension Post {
 
     static func quote(post: Post, quote: String, reposter: User) -> Post {
         Post(
-            id: UUID(),
-            authorId: reposter.id,
+            author: reposter,
             content: post.content,
             originalPostId: post.id,
             quote: quote,
