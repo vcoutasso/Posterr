@@ -25,9 +25,9 @@ final class NewPostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
-
         setupSubviews()
+
+        view.backgroundColor = .systemBackground
     }
 
     private lazy var textView: UITextView = {

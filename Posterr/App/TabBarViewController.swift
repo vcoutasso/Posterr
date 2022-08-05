@@ -14,6 +14,7 @@ final class TabBarViewController: UITabBarController {
             profileNavigationController,
         ]
 
+        tabBar.backgroundColor = .systemBackground
         setViewControllers(tabBarViewControllers, animated: true)
     }
 }
