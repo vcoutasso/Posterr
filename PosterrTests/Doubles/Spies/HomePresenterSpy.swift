@@ -4,8 +4,13 @@ import Foundation
 final class HomePresenterSpy: HomePresentationLogic {
     var displayLogicDelegate: HomeDisplayLogic?
 
-    private(set) var didCallPresentNewPostView = false
+    private(set) var didPresentNewPostView = false
     func presentNewPostView(_ response: Home.NewPost.Response) {
-        didCallPresentNewPostView = true
+        didPresentNewPostView = true
+    }
+
+    private(set) var didPresentPosts = false
+    func presentPosts(_ response: Home.Posts.Response) {
+        didPresentPosts = true
     }
 }

@@ -5,4 +5,9 @@ final class HomeDisplayLogicSpy: HomeDisplayLogic {
     func displayNewPostView(_ viewModel: Home.NewPost.ViewModel) {
         didDisplayNewPostView = true
     }
+
+    private(set) var didDisplayPosts = false
+    func displayPosts(_ viewModel: Home.Posts.ViewModel) {
+        didDisplayPosts = true
+    }
 }

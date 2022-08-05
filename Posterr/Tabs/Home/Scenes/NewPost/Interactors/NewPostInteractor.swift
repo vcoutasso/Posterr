@@ -27,8 +27,8 @@ final class NewPostInteractor: NewPostInteractionLogic, NewPostDataStore {
 
     func makePost(_ request: NewPost.Post.Request) {
         let newPost = Post.new(
-            authorId: user.id,
-            content: request.content)
+            content: request.content,
+            poster: user)
         post = newPost
 
         let response = NewPost.Post.Response(didSucceed: true)

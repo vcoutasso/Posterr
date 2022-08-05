@@ -20,7 +20,7 @@ final class HomeInteractorTests: XCTestCase {
         sut.newPost(request)
 
         // Then
-        XCTAssert(presenterSpy.didCallPresentNewPostView)
+        XCTAssert(presenterSpy.didPresentNewPostView)
     }
 
     func testAddPostShouldAddToAllPosts() {

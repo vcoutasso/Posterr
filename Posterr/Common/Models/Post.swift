@@ -27,29 +27,29 @@ struct Post: Equatable {
 // MARK: - Factories
 
 extension Post {
-    static func new(id: UUID = UUID(), authorId: UUID, content: String) -> Post {
+    static func new(content: String, poster: User) -> Post {
         Post(
-            id: id,
-            authorId: authorId,
+            id: UUID(),
+            authorId: poster.id,
             content: content,
             type: .original)
     }
 
-    static func repost(id: UUID = UUID(), authorId: UUID, original: Post) -> Post {
+    static func repost(post: Post, reposter: User) -> Post {
         Post(
-            id: id,
-            authorId: authorId,
-            content: original.content,
-            originalPostId: original.id,
+            id: UUID(),
+            authorId: reposter.id,
+            content: post.content,
+            originalPostId: post.id,
             type: .repost)
     }
 
-    static func quote(id: UUID = UUID(), authorId: UUID, original: Post, quote: String) -> Post {
+    static func quote(post: Post, quote: String, reposter: User) -> Post {
         Post(
-            id: id,
-            authorId: authorId,
-            content: original.content,
-            originalPostId: original.id,
+            id: UUID(),
+            authorId: reposter.id,
+            content: post.content,
+            originalPostId: post.id,
             quote: quote,
             type: .quote)
     }

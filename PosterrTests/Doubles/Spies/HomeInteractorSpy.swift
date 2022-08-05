@@ -2,7 +2,6 @@ import Foundation
 @testable import Posterr
 
 final class HomeInteractorSpy: HomeInteractionLogic & HomeDataStore {
-
     private(set) var presenter: HomePresentationLogic
     private(set) var allPosts: [Post]
 
@@ -19,5 +18,10 @@ final class HomeInteractorSpy: HomeInteractionLogic & HomeDataStore {
     private(set) var didCallAddPost = false
     func addPost(_ post: Post) {
         didCallAddPost = true
+    }
+
+    private(set) var didFetchPosts = false
+    func fetchPosts(_ request: Home.Posts.Request) {
+        didFetchPosts = true
     }
 }
