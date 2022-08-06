@@ -1,16 +1,18 @@
 import Foundation
+import UIKit
 
 final class NewPostInteractor: NewPostInteractionLogic, NewPostDataStore {
     private(set) var presenter: NewPostPresentationLogic
 
-    private(set) var user: User
+    var user: User {
+        (UIApplication.shared.delegate as! AppDelegate).userManager.currentUser
+    }
     private(set) var post: Post?
 
     private let maxTextLength: Int = 777
 
-    init(presenter: NewPostPresentationLogic, user: User) {
+    init(presenter: NewPostPresentationLogic) {
         self.presenter = presenter
-        self.user = user
     }
 
     func handleContentChange(_ request: NewPost.ContentChange.Request) {

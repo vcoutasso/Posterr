@@ -15,13 +15,14 @@
 		4C42AE94289AB512001589A7 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE93289AB512001589A7 /* PostList.swift */; };
 		4C4ADC11289868540032EB73 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4ADC10289868540032EB73 /* User.swift */; };
 		4C4ADC13289869130032EB73 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4ADC12289869130032EB73 /* Post.swift */; };
+		4C60B9D2289EDE0F00EB1366 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60B9D1289EDE0F00EB1366 /* UserManager.swift */; };
+		4C60B9D6289EF25E00EB1366 /* PosterrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60B9D4289EF25E00EB1366 /* PosterrUITests.swift */; };
+		4C60B9D7289EF25E00EB1366 /* PosterrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60B9D5289EF25E00EB1366 /* PosterrUITestsLaunchTests.swift */; };
 		4C700E682896355400097CE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E672896355400097CE4 /* AppDelegate.swift */; };
 		4C700E6A2896355400097CE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E692896355400097CE4 /* SceneDelegate.swift */; };
 		4C700E6C2896355400097CE4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E6B2896355400097CE4 /* TabBarViewController.swift */; };
 		4C700E712896355600097CE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C700E702896355600097CE4 /* Assets.xcassets */; };
 		4C700E742896355600097CE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C700E722896355600097CE4 /* LaunchScreen.storyboard */; };
-		4C700E892896355600097CE4 /* PosterrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E882896355600097CE4 /* PosterrUITests.swift */; };
-		4C700E8B2896355600097CE4 /* PosterrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E8A2896355600097CE4 /* PosterrUITestsLaunchTests.swift */; };
 		4C700E9E28963CA000097CE4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E9D28963CA000097CE4 /* HomeViewController.swift */; };
 		4C700EA028963CB300097CE4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E9F28963CB300097CE4 /* ProfileViewController.swift */; };
 		4C7D204A2898BE1B0021A594 /* NewPostModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D20492898BE1B0021A594 /* NewPostModels.swift */; };
@@ -98,6 +99,9 @@
 		4C42AE93289AB512001589A7 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		4C4ADC10289868540032EB73 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4C4ADC12289869130032EB73 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		4C60B9D1289EDE0F00EB1366 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		4C60B9D4289EF25E00EB1366 /* PosterrUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterrUITests.swift; sourceTree = "<group>"; };
+		4C60B9D5289EF25E00EB1366 /* PosterrUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterrUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4C700E642896355400097CE4 /* Posterr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posterr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C700E672896355400097CE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C700E692896355400097CE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,8 +111,6 @@
 		4C700E752896355600097CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C700E7A2896355600097CE4 /* PosterrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosterrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C700E842896355600097CE4 /* PosterrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosterrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C700E882896355600097CE4 /* PosterrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterrUITests.swift; sourceTree = "<group>"; };
-		4C700E8A2896355600097CE4 /* PosterrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterrUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4C700E9D28963CA000097CE4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4C700E9F28963CB300097CE4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4C7D20492898BE1B0021A594 /* NewPostModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostModels.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		4C4ADC0E2898681C0032EB73 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4C60B9D0289EDE0500EB1366 /* Helper */,
 				4C42AE90289AB389001589A7 /* Delegates */,
 				4C42AE73289AA30F001589A7 /* UI */,
 				4C7D20552898D5A30021A594 /* Extensions */,
@@ -239,12 +242,29 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		4C60B9D0289EDE0500EB1366 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4C60B9D1289EDE0F00EB1366 /* UserManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		4C60B9D3289EF25E00EB1366 /* PosterrUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4C60B9D4289EF25E00EB1366 /* PosterrUITests.swift */,
+				4C60B9D5289EF25E00EB1366 /* PosterrUITestsLaunchTests.swift */,
+			);
+			path = PosterrUITests;
+			sourceTree = "<group>";
+		};
 		4C700E5B2896355400097CE4 = {
 			isa = PBXGroup;
 			children = (
 				4C700E662896355400097CE4 /* Posterr */,
 				4C700E7D2896355600097CE4 /* PosterrTests */,
-				4C700E872896355600097CE4 /* PosterrUITests */,
+				4C60B9D3289EF25E00EB1366 /* PosterrUITests */,
 				4C700E652896355400097CE4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -279,15 +299,6 @@
 				4CDFB1A928996F2D00AF45B0 /* Tests */,
 			);
 			path = PosterrTests;
-			sourceTree = "<group>";
-		};
-		4C700E872896355600097CE4 /* PosterrUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4C700E882896355600097CE4 /* PosterrUITests.swift */,
-				4C700E8A2896355600097CE4 /* PosterrUITestsLaunchTests.swift */,
-			);
-			path = PosterrUITests;
 			sourceTree = "<group>";
 		};
 		4C700E9728963C4400097CE4 /* App */ = {
@@ -853,6 +864,7 @@
 				4CEE1F1A289772570006B897 /* NewPostRoutingLogic.swift in Sources */,
 				4C7D204D2898C9FA0021A594 /* HomeDataStore.swift in Sources */,
 				4CEE1EEA2897262D0006B897 /* HomePresenter.swift in Sources */,
+				4C60B9D2289EDE0F00EB1366 /* UserManager.swift in Sources */,
 				4CDFB1BB289981C200AF45B0 /* HomeModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -883,8 +895,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C700E8B2896355600097CE4 /* PosterrUITestsLaunchTests.swift in Sources */,
-				4C700E892896355600097CE4 /* PosterrUITests.swift in Sources */,
+				4C60B9D7289EF25E00EB1366 /* PosterrUITestsLaunchTests.swift in Sources */,
+				4C60B9D6289EF25E00EB1366 /* PosterrUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

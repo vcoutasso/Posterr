@@ -28,7 +28,7 @@ final class PostTableViewCell: UITableViewCell {
     }()
 
     private lazy var profileImageView: UIImageView = {
-        let imageView = UIImageView(image: profileImage?.withTintColor(.purple))
+        let imageView = UIImageView(image: profileImage)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
 
@@ -77,6 +77,7 @@ final class PostTableViewCell: UITableViewCell {
 
 extension PostTableViewCell: ReusableView {
     func configure(with post: Post, originalPost: Post? = nil) {
+        profileImageView.image = profileImageView.image?.withTintColor(post.author.preferredColor)
         repostLabel.alpha = post.type == .quote ? 1 : 0
         usernameLabel.text = "@\(post.author.username)"
         postTextLabel.text = post.content

@@ -8,7 +8,7 @@ final class NewPostInteractorTests: XCTestCase {
 
     // MARK: - System under test
 
-    private lazy var sut = NewPostInteractor(presenter: presenterSpy, user: .default)
+    private lazy var sut = NewPostInteractor(presenter: presenterSpy)
 
     // MARK: - Tests
 

@@ -5,7 +5,7 @@ final class NewPostViewControllerTests: XCTestCase {
     // MARK: - Dependencies
 
     private let presenterSpy = NewPostPresenterSpy()
-    private lazy var interactorSpy = NewPostInteractorSpy(presenter: presenterSpy, user: .default)
+    private lazy var interactorSpy = NewPostInteractorSpy(presenter: presenterSpy, user: .debugUser1)
     private lazy var routerSpy = NewPostRouterSpy(dataStore: interactorSpy)
 
     // MARK: - System under test
