@@ -127,11 +127,21 @@ private extension HomeViewController {
     }
 
     func setupNavigationBar() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "person.crop.circle"),
-            style: .plain,
-            target: nil,
-            action: nil)
+        let userManager = (UIApplication.shared.delegate as! AppDelegate).userManager
+        let currentUser = userManager.currentUser
+        let signedInUsers = userManager.signedInUsers
+        let image = UIImage(systemName: "person.crop.circle")?.withRenderingMode(.alwaysOriginal)
+            .withTintColor(currentUser.preferredColor)
+
+        let currentUserOffset = signedInUsers.startIndex + 1
+        let menuChildren = signedInUsers.suffix(from: currentUserOffset).enumerated().map { index, user in
+            UIAction(title: user.username) { [weak self] action in
+                userManager.selectUser(at: index + currentUserOffset)
+                self?.setupNavigationBar()
+            }
+        }
+        let menu = UIMenu(title: "Select User", children: [UIMenu(title: "", options: .displayInline, children: menuChildren)])
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", image: image, primaryAction: nil, menu: menu)
 
         navigationItem.title = "Posterr"
     }

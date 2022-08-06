@@ -4,12 +4,14 @@ struct Post: Equatable {
     let id: UUID
     let author: User
     let content: String
+    let date: Date
     let originalPostId: UUID?
     let quote: String?
     let type: PostType
 
-    private init(id: UUID = UUID(), author: User, content: String, originalPostId: UUID? = nil, quote: String? = nil, type: PostType) {
-        self.id = id
+    private init(author: User, content: String, originalPostId: UUID? = nil, quote: String? = nil, type: PostType) {
+        self.id = UUID()
+        self.date = .now
         self.author = author
         self.content = content
         self.originalPostId = originalPostId
