@@ -12,6 +12,8 @@ final class PostTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: Subviews
+
     private lazy var repostLabel: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .caption2)
@@ -65,6 +67,8 @@ final class PostTableViewCell: UITableViewCell {
 
         return stack
     }()
+
+    // MARK: Layout Metrics
 
     enum LayoutMetrics {
         static let profileImageCellWidthMultiplier: CGFloat = 0.15
