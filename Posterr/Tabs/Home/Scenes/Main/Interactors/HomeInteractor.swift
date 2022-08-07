@@ -21,7 +21,7 @@ final class HomeInteractor: HomeInteractionLogic, HomeDataStore {
 }
 
 extension HomeInteractor {
-    func addPost(_ post: Post) {
+    func addNewPost(_ post: Post) {
         allPosts.insert(post, at: allPosts.startIndex)
     }
 }

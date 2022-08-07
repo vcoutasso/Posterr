@@ -16,7 +16,7 @@ final class HomeInteractorSpy: HomeInteractionLogic & HomeDataStore {
     }
 
     private(set) var didCallAddPost = false
-    func addPost(_ post: Post) {
+    func addNewPost(_ post: Post) {
         didCallAddPost = true
     }
 

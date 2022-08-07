@@ -5,18 +5,27 @@ final class ProfileViewController: UIViewController {
 
     private let interactor: ProfileInteractionLogic
 
+    private var userManager: UserManager {
+        (UIApplication.shared.delegate as! AppDelegate).userManager
+    }
+
     init(interactor: ProfileInteractionLogic) {
         self.interactor = interactor
 
         super.init(nibName: nil, bundle: nil)
 
         setupTabBarItem()
-        setupNavigationBar()
     }
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setupNavigationBar()
     }
 
     override func viewDidLoad() {
@@ -43,6 +52,6 @@ private extension ProfileViewController {
     }
 
     func setupNavigationBar() {
-        navigationItem.title = "Profile"
+        navigationItem.title = userManager.currentUser.username
     }
 }

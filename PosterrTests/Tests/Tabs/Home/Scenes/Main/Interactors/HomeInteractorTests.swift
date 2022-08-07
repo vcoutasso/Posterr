@@ -29,7 +29,7 @@ final class HomeInteractorTests: XCTestCase {
         XCTAssert(sut.allPosts.isEmpty)
 
         // When
-        sut.addPost(newPost)
+        sut.addNewPost(newPost)
 
         // Then
         XCTAssert(sut.allPosts.contains(newPost))

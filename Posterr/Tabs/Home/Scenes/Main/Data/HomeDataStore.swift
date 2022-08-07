@@ -3,5 +3,5 @@ import Foundation
 protocol HomeDataStore: AnyObject {
     var allPosts: [Post] { get }
 
-    func addPost(_ post: Post)
+    func addNewPost(_ post: Post)
 }

@@ -15,7 +15,7 @@
 		4C42AE94289AB512001589A7 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE93289AB512001589A7 /* PostList.swift */; };
 		4C4ADC11289868540032EB73 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4ADC10289868540032EB73 /* User.swift */; };
 		4C4ADC13289869130032EB73 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4ADC12289869130032EB73 /* Post.swift */; };
-		4C60B9D2289EDE0F00EB1366 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60B9D1289EDE0F00EB1366 /* UserManager.swift */; };
+		4C60B9D2289EDE0F00EB1366 /* FakeUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60B9D1289EDE0F00EB1366 /* FakeUserManager.swift */; };
 		4C60B9D6289EF25E00EB1366 /* PosterrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60B9D4289EF25E00EB1366 /* PosterrUITests.swift */; };
 		4C60B9D7289EF25E00EB1366 /* PosterrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60B9D5289EF25E00EB1366 /* PosterrUITestsLaunchTests.swift */; };
 		4C700E682896355400097CE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C700E672896355400097CE4 /* AppDelegate.swift */; };
@@ -42,6 +42,7 @@
 		4CA66CA12899F829004559A1 /* NewPostViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA66CA02899F829004559A1 /* NewPostViewControllerTests.swift */; };
 		4CA66CA32899FAD2004559A1 /* NewPostInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA66CA22899FAD2004559A1 /* NewPostInteractorTests.swift */; };
 		4CA66CA52899FEF4004559A1 /* NewPostPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA66CA42899FEF4004559A1 /* NewPostPresenterTests.swift */; };
+		4CDA2B5128A0474100FA29AF /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA2B5028A0474100FA29AF /* UserManager.swift */; };
 		4CDFB1A828996EE400AF45B0 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFB1A728996EE400AF45B0 /* HomeViewControllerTests.swift */; };
 		4CDFB1AD28996F7500AF45B0 /* HomeInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFB1AC28996F7500AF45B0 /* HomeInteractorSpy.swift */; };
 		4CDFB1AF2899701500AF45B0 /* HomePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFB1AE2899701500AF45B0 /* HomePresenterSpy.swift */; };
@@ -99,7 +100,7 @@
 		4C42AE93289AB512001589A7 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		4C4ADC10289868540032EB73 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4C4ADC12289869130032EB73 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		4C60B9D1289EDE0F00EB1366 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		4C60B9D1289EDE0F00EB1366 /* FakeUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUserManager.swift; sourceTree = "<group>"; };
 		4C60B9D4289EF25E00EB1366 /* PosterrUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterrUITests.swift; sourceTree = "<group>"; };
 		4C60B9D5289EF25E00EB1366 /* PosterrUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterrUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4C700E642896355400097CE4 /* Posterr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posterr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +131,7 @@
 		4CA66CA02899F829004559A1 /* NewPostViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewControllerTests.swift; sourceTree = "<group>"; };
 		4CA66CA22899FAD2004559A1 /* NewPostInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostInteractorTests.swift; sourceTree = "<group>"; };
 		4CA66CA42899FEF4004559A1 /* NewPostPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostPresenterTests.swift; sourceTree = "<group>"; };
+		4CDA2B5028A0474100FA29AF /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		4CDFB1A728996EE400AF45B0 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		4CDFB1AC28996F7500AF45B0 /* HomeInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorSpy.swift; sourceTree = "<group>"; };
 		4CDFB1AE2899701500AF45B0 /* HomePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpy.swift; sourceTree = "<group>"; };
@@ -245,7 +247,8 @@
 		4C60B9D0289EDE0500EB1366 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				4C60B9D1289EDE0F00EB1366 /* UserManager.swift */,
+				4CDA2B5028A0474100FA29AF /* UserManager.swift */,
+				4C60B9D1289EDE0F00EB1366 /* FakeUserManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -840,6 +843,7 @@
 				4CEE1EDD289722F30006B897 /* HomeDisplayLogic.swift in Sources */,
 				4CEE1F00289742520006B897 /* NewPostViewController.swift in Sources */,
 				4C7D20522898CB240021A594 /* NewPostDataStore.swift in Sources */,
+				4CDA2B5128A0474100FA29AF /* UserManager.swift in Sources */,
 				4C700EA028963CB300097CE4 /* ProfileViewController.swift in Sources */,
 				4CEE1F1F289772950006B897 /* NewPostViewControllerFactory.swift in Sources */,
 				4CEE1EF0289737AC0006B897 /* ProfilePresentationLogic.swift in Sources */,
@@ -864,7 +868,7 @@
 				4CEE1F1A289772570006B897 /* NewPostRoutingLogic.swift in Sources */,
 				4C7D204D2898C9FA0021A594 /* HomeDataStore.swift in Sources */,
 				4CEE1EEA2897262D0006B897 /* HomePresenter.swift in Sources */,
-				4C60B9D2289EDE0F00EB1366 /* UserManager.swift in Sources */,
+				4C60B9D2289EDE0F00EB1366 /* FakeUserManager.swift in Sources */,
 				4CDFB1BB289981C200AF45B0 /* HomeModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
