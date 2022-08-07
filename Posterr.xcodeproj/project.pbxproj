@@ -43,6 +43,9 @@
 		4CA66CA32899FAD2004559A1 /* NewPostInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA66CA22899FAD2004559A1 /* NewPostInteractorTests.swift */; };
 		4CA66CA52899FEF4004559A1 /* NewPostPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA66CA42899FEF4004559A1 /* NewPostPresenterTests.swift */; };
 		4CDA2B5128A0474100FA29AF /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA2B5028A0474100FA29AF /* UserManager.swift */; };
+		4CDA2B5428A04B1900FA29AF /* PostDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA2B5328A04B1900FA29AF /* PostDataStore.swift */; };
+		4CDA2B5628A04B4E00FA29AF /* AppPostDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA2B5528A04B4E00FA29AF /* AppPostDataStore.swift */; };
+		4CDA2B5928A04C6200FA29AF /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA2B5828A04C6200FA29AF /* ProfileDataStore.swift */; };
 		4CDFB1A828996EE400AF45B0 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFB1A728996EE400AF45B0 /* HomeViewControllerTests.swift */; };
 		4CDFB1AD28996F7500AF45B0 /* HomeInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFB1AC28996F7500AF45B0 /* HomeInteractorSpy.swift */; };
 		4CDFB1AF2899701500AF45B0 /* HomePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFB1AE2899701500AF45B0 /* HomePresenterSpy.swift */; };
@@ -132,6 +135,9 @@
 		4CA66CA22899FAD2004559A1 /* NewPostInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostInteractorTests.swift; sourceTree = "<group>"; };
 		4CA66CA42899FEF4004559A1 /* NewPostPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostPresenterTests.swift; sourceTree = "<group>"; };
 		4CDA2B5028A0474100FA29AF /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		4CDA2B5328A04B1900FA29AF /* PostDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataStore.swift; sourceTree = "<group>"; };
+		4CDA2B5528A04B4E00FA29AF /* AppPostDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPostDataStore.swift; sourceTree = "<group>"; };
+		4CDA2B5828A04C6200FA29AF /* ProfileDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataStore.swift; sourceTree = "<group>"; };
 		4CDFB1A728996EE400AF45B0 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		4CDFB1AC28996F7500AF45B0 /* HomeInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorSpy.swift; sourceTree = "<group>"; };
 		4CDFB1AE2899701500AF45B0 /* HomePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpy.swift; sourceTree = "<group>"; };
@@ -226,6 +232,7 @@
 		4C4ADC0E2898681C0032EB73 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4CDA2B5228A04AFF00FA29AF /* Data */,
 				4C60B9D0289EDE0500EB1366 /* Helper */,
 				4C42AE90289AB389001589A7 /* Delegates */,
 				4C42AE73289AA30F001589A7 /* UI */,
@@ -351,6 +358,7 @@
 		4C700E9C28963C8C00097CE4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				4CDA2B5728A04C5300FA29AF /* Data */,
 				4CEE1EFC28973AFA0006B897 /* Utils */,
 				4CEE1EED289737890006B897 /* Views */,
 				4CEE1EF528973A2E0006B897 /* Interactors */,
@@ -450,6 +458,23 @@
 				4CA66CA02899F829004559A1 /* NewPostViewControllerTests.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4CDA2B5228A04AFF00FA29AF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4CDA2B5328A04B1900FA29AF /* PostDataStore.swift */,
+				4CDA2B5528A04B4E00FA29AF /* AppPostDataStore.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4CDA2B5728A04C5300FA29AF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4CDA2B5828A04C6200FA29AF /* ProfileDataStore.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		4CDFB1A028996DDE00AF45B0 /* Tabs */ = {
@@ -850,6 +875,7 @@
 				4CEE1F0B2897656C0006B897 /* HomeRouter.swift in Sources */,
 				4C42AE94289AB512001589A7 /* PostList.swift in Sources */,
 				4C700E6A2896355400097CE4 /* SceneDelegate.swift in Sources */,
+				4CDA2B5928A04C6200FA29AF /* ProfileDataStore.swift in Sources */,
 				4CEE1F0D289768D70006B897 /* NewPostDisplayLogic.swift in Sources */,
 				4CEE1EF928973A820006B897 /* ProfileInteractor.swift in Sources */,
 				4CEE1EF728973A3D0006B897 /* ProfileInteractionLogic.swift in Sources */,
@@ -858,6 +884,7 @@
 				4CEE1EFB28973AA00006B897 /* ProfilePresenter.swift in Sources */,
 				4CEE1EE0289723750006B897 /* HomeInteractor.swift in Sources */,
 				4C42AE92289AB396001589A7 /* DisplayLogicDelegate.swift in Sources */,
+				4CDA2B5428A04B1900FA29AF /* PostDataStore.swift in Sources */,
 				4CEE1EE82897261F0006B897 /* HomePresentationLogic.swift in Sources */,
 				4CEE1EEC289737630006B897 /* ProfileDisplayLogic.swift in Sources */,
 				4C42AE81289AA7A4001589A7 /* ReusableView.swift in Sources */,
@@ -865,6 +892,7 @@
 				4C7D204A2898BE1B0021A594 /* NewPostModels.swift in Sources */,
 				4CEE1F12289771A80006B897 /* NewPostPresenter.swift in Sources */,
 				4CEE1EE62897249C0006B897 /* HomeViewControllerFactory.swift in Sources */,
+				4CDA2B5628A04B4E00FA29AF /* AppPostDataStore.swift in Sources */,
 				4CEE1F1A289772570006B897 /* NewPostRoutingLogic.swift in Sources */,
 				4C7D204D2898C9FA0021A594 /* HomeDataStore.swift in Sources */,
 				4CEE1EEA2897262D0006B897 /* HomePresenter.swift in Sources */,

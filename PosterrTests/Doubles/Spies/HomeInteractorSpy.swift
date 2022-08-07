@@ -3,11 +3,11 @@ import Foundation
 
 final class HomeInteractorSpy: HomeInteractionLogic & HomeDataStore {
     private(set) var presenter: HomePresentationLogic
-    private(set) var allPosts: [Post]
+    private(set) var postDataStore: PostDataStore
 
-    init(presenter: HomePresentationLogic, allPosts: [Post] = []) {
+    init(presenter: HomePresentationLogic, postDataStore: PostDataStore) {
         self.presenter = presenter
-        self.allPosts = allPosts
+        self.postDataStore = postDataStore
     }
 
     private(set) var didCallNewPost = false

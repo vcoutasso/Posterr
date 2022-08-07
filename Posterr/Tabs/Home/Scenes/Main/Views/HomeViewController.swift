@@ -84,7 +84,7 @@ extension HomeViewController: HomeDisplayLogic {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        interactor.allPosts.count
+        interactor.postDataStore.allPosts.count
     }
 
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -101,7 +101,7 @@ extension HomeViewController: UITableViewDataSource {
             for: indexPath) as? PostTableViewCell
         else { return PostTableViewCell() }
 
-        let post = interactor.allPosts[indexPath.row]
+        let post = interactor.postDataStore.allPosts[indexPath.row]
         cell.configure(with: post)
 
         return cell

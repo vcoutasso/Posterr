@@ -1,5 +1,5 @@
 import Foundation
 
-protocol HomeDataStore: AnyObject {
+protocol ProfileDataStore: AnyObject {
     var postDataStore: PostDataStore { get }
 }

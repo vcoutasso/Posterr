@@ -5,7 +5,8 @@ final class HomeViewControllerTests: XCTestCase {
     // MARK: - Dependencies
 
     private let presenterSpy = HomePresenterSpy()
-    private lazy var interactorSpy = HomeInteractorSpy(presenter: presenterSpy)
+    private let postDataStore = AppPostDataStore()
+    private lazy var interactorSpy = HomeInteractorSpy(presenter: presenterSpy, postDataStore: postDataStore)
     private lazy var routerSpy = HomeRouterSpy(dataStore: interactorSpy)
     
 

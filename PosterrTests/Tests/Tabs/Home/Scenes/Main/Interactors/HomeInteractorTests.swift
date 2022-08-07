@@ -5,10 +5,11 @@ final class HomeInteractorTests: XCTestCase {
     // MARK: - Dependencies
 
     private let presenterSpy = HomePresenterSpy()
+    private let postDataStore = AppPostDataStore()
 
     // MARK: - System under test
 
-    private lazy var sut = HomeInteractor(presenter: presenterSpy)
+    private lazy var sut = HomeInteractor(presenter: presenterSpy, postDataStore: postDataStore)
 
     // MARK: - Tests
 
@@ -26,12 +27,12 @@ final class HomeInteractorTests: XCTestCase {
     func testAddPostShouldAddToAllPosts() {
         // Given
         let newPost = Fixtures.Posts.new
-        XCTAssert(sut.allPosts.isEmpty)
+        XCTAssert(sut.postDataStore.allPosts.isEmpty)
 
         // When
-        sut.addNewPost(newPost)
+        sut.postDataStore.addNewPost(newPost)
 
         // Then
-        XCTAssert(sut.allPosts.contains(newPost))
+        XCTAssert(sut.postDataStore.allPosts.contains(newPost))
     }
 }

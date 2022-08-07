@@ -23,7 +23,7 @@ final class NewPostRouter: NewPostRoutingLogic, NewPostDataPassing {
     private func passDataToParent(source: NewPostDataStore, destination: HomeDataStore) {
         guard let post = source.post else { return }
 
-        destination.addNewPost(post)
+        destination.postDataStore.addNewPost(post)
     }
 
     private func navigateToParent(source: NewPostViewController, destination: HomeViewController) {
