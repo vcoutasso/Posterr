@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		439E278828B6E46000D2D31A /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE88289AA886001589A7 /* ReusableView.swift */; };
 		4C42AE7A289AA6B8001589A7 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE79289AA6B8001589A7 /* PostTableViewCell.swift */; };
 		4C42AE7C289AA727001589A7 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE7B289AA727001589A7 /* UITableView+.swift */; };
-		4C42AE81289AA7A4001589A7 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE80289AA7A4001589A7 /* ReusableView.swift */; };
 		4C42AE85289AA827001589A7 /* CodedViewLifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE84289AA827001589A7 /* CodedViewLifecycle.swift */; };
 		4C42AE92289AB396001589A7 /* DisplayLogicDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE91289AB396001589A7 /* DisplayLogicDelegate.swift */; };
 		4C42AE94289AB512001589A7 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42AE93289AB512001589A7 /* PostList.swift */; };
@@ -96,7 +96,6 @@
 /* Begin PBXFileReference section */
 		4C42AE79289AA6B8001589A7 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		4C42AE7B289AA727001589A7 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
-		4C42AE80289AA7A4001589A7 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReusableView.swift; path = ../../../../../Documents/ReusableView.swift; sourceTree = "<group>"; };
 		4C42AE84289AA827001589A7 /* CodedViewLifecycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedViewLifecycle.swift; sourceTree = "<group>"; };
 		4C42AE88289AA886001589A7 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		4C42AE91289AB396001589A7 /* DisplayLogicDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLogicDelegate.swift; sourceTree = "<group>"; };
@@ -198,7 +197,6 @@
 			children = (
 				4C42AE87289AA882001589A7 /* Misc */,
 				4C42AE86289AA865001589A7 /* Post */,
-				4C42AE80289AA7A4001589A7 /* ReusableView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -850,6 +848,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				439E278828B6E46000D2D31A /* ReusableView.swift in Sources */,
 				4CEE1F17289771E00006B897 /* NewPostInteractor.swift in Sources */,
 				4C7D204F2898CA470021A594 /* HomeDataPassing.swift in Sources */,
 				4C7D20542898CB4D0021A594 /* NewPostDataPassing.swift in Sources */,
@@ -887,7 +886,6 @@
 				4CDA2B5428A04B1900FA29AF /* PostDataStore.swift in Sources */,
 				4CEE1EE82897261F0006B897 /* HomePresentationLogic.swift in Sources */,
 				4CEE1EEC289737630006B897 /* ProfileDisplayLogic.swift in Sources */,
-				4C42AE81289AA7A4001589A7 /* ReusableView.swift in Sources */,
 				4C7D20572898D5B00021A594 /* UINavigationController+.swift in Sources */,
 				4C7D204A2898BE1B0021A594 /* NewPostModels.swift in Sources */,
 				4CEE1F12289771A80006B897 /* NewPostPresenter.swift in Sources */,
